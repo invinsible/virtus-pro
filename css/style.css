@@ -118,7 +118,7 @@ body {
 }
 
 .logo {
-  width: 68px;
+  min-width: 60px;
   margin: 0 3%;
 }
 
@@ -150,6 +150,12 @@ body {
   letter-spacing: 0.5px;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+}
+
+@media (max-width: 1440px) {
+  .menu__link {
+    padding: 31px 10px;
+  }
 }
 
 .menu .has-sub > .menu__link {
@@ -296,6 +302,12 @@ body {
   background-color: red;
 }
 
+@media (max-width: 1260px) {
+  .user-lk {
+    display: none;
+  }
+}
+
 .switch-lang {
   position: relative;
   margin-right: 10px;
@@ -313,6 +325,12 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+}
+
+@media (max-width: 1440px) {
+  .switch-lang__btn {
+    padding: 31px 10px;
+  }
 }
 
 .switch-lang .menu-sub {
