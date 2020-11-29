@@ -14,12 +14,13 @@
       <img src="/img/promo-header.jpg" alt="">
     </a>
 
-    <div class="header__wrapper">
-      <div class="header__left">
-        <nav class="main-nav">
-          <a class="logo logo--header" href="#">
-            <img src="/img/logo.png" alt="Логотип Virtus Pro">
-          </a>
+    <div class="header__wrapper">      
+      <nav class="main-nav">
+        <a class="logo logo--header" href="#">
+          <img src="/img/logo.png" alt="Логотип Virtus Pro">
+        </a>
+
+        <div class="search-wrapper">
           <ul class="menu">
             <li class="menu__item active">
               <a class="menu__link" href="#">Новости</a>
@@ -68,22 +69,26 @@
           </ul>
     
           <form class="search" action="#">
-            <input type="text">
-            <button type="submit" aria-label="Найти"></button>
+            <div class="search__item">
+              <input class="search__input" type="text" placeholder="Введите поисковой запрос">
+            </div>            
+            <button class="search__btn" type="submit" aria-label="Найти"></button>
           </form>
-      </div>
+        </div>        
+      </nav>
+      
       
       <div class="header__right">
-        <a class="user-lk" href="#"></a>
+        <a class="user-lk" href="#">user</a>
          
         <div class="switch-lang">
           <button class="switch-lang__btn" type="button" aria-label="Сменить язык">Eng</button>
-          <ul class="switch-lang__list"> 
-            <li class="switch-lang__item">
-              <a class="switch-lang__link" href="#">Eng</a>
+          <ul class="switch-lang__list menu-sub"> 
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Eng</a>
             </li>
-            <li class="switch-lang__item">
-              <a class="switch-lang__link" href="#">Rus</a>
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Rus</a>
             </li>
           </ul>
         </div>

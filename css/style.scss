@@ -64,6 +64,12 @@ body {
   background-color: #1F2326;
 }
 
+.container {
+  padding: 0 7px;;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
 .promo {
   display: block;
 }
@@ -77,16 +83,23 @@ body {
     justify-content: space-between;
     background-color: #FC5000;
     box-shadow: 0px 0px 2px #000;
+  } 
+
+  &__right {
+    display: flex;
+    align-items: center;
   }
 }
 
 .main-nav {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
 .logo {
-  margin: 0 60px
+  width: 68px;
+  margin: 0 3%;
 }
 
 .menu {
@@ -104,11 +117,12 @@ body {
 
   &__link {
     position: relative;
-    padding: 31px;
+    padding: 31px 20px;
     display: block;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
     transition: all 0.25s;    
   }
 
@@ -170,4 +184,109 @@ body {
     height: 8px;
     background-color: #1F2326;
   }
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.search {
+  margin-left: auto;
+  display: flex;
+
+  &__item {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 97%;
+    height: 100%;
+    display: none;
+    transform: translateY(-50%);
+    background-color: #FC5000;
+  }
+
+  &__input {
+    width: 100%;   
+    font-size: 18px;
+    font-weight: 500; 
+    color: #fff;
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    &::placeholder {
+      color: #fff;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    padding: 17px;
+    margin-right: 25px;
+    display: block;        
+    background-color: transparent;
+    background-image: url('/img/search-ico.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: opacity 0.25s;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+}
+
+
+// USER LK
+.user-lk {
+  padding: 31px;
+  display: block;
+  width: 206px;
+  background-color: red;
+}
+// END USER LK
+
+.switch-lang {
+  position: relative;
+  margin-right: 10px;
+
+  &__btn {
+    padding: 31px;
+    display: block;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0;
+    outline: 0;    
+    cursor: pointer; 
+    transition: all 0.25s;   
+  }
+
+  .menu-sub {
+    max-width: 100%;
+  }
+
+  &:hover {
+    & > .switch-lang__btn {
+      background-color: #fff;
+      color: #FC5000;
+    }
+
+    & > .menu-sub {
+      display: block;
+    }
+  }
+  
 }
