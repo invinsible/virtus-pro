@@ -75,6 +75,25 @@ body {
   display: block;
 }
 
+.label {
+  padding: 6px 0;
+  width: 95px;  
+  font-size: 1.28em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1F2326;
+  text-align: center;
+  text-transform: uppercase;
+  clip-path: polygon(0 0, 87% 0, 100% 40%, 100% 100%, 13% 100%, 0 65%);
+
+  
+
+  &--white {
+    color: #1F1F1F;
+    background-color: #fff;
+  }
+}
+
 .header {  
 
   &__wrapper {
@@ -354,4 +373,34 @@ body {
     font-size: 1.5em;
     transition: color 0.25s;
   }
+}
+
+.news-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: 33.333%;
+  }
+
+  &__link {
+    color: #1F1F1F;
+
+    &:hover {
+      .list-news__title {
+        color: #FC5000;
+      }
+    }
+  }
+
+  &__description {
+    background-color: #fff;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    transition: color 0.25s;
+  }
+
 }
