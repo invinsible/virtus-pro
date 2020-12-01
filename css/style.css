@@ -101,8 +101,9 @@ body {
 }
 
 .label {
-  padding: 6px 0;
-  width: 95px;
+  padding: 6px 17px;
+  display: inline-block;
+  min-width: 95px;
   font-size: 1.28em;
   font-weight: 600;
   color: #fff;
@@ -499,12 +500,14 @@ body {
   color: #1F1F1F;
 }
 
-.news-list__link:hover .list-news__title {
+.news-list__link:hover .news-list__title {
   color: #FC5000;
 }
 
 .news-list__img {
+  position: relative;
   max-width: 400px;
+  z-index: 2;
   -webkit-clip-path: polygon(96% 0, 100% 7%, 100% 100%, 0% 100%, 0 100%, 0 0);
           clip-path: polygon(96% 0, 100% 7%, 100% 100%, 0% 100%, 0 100%, 0 0);
 }
@@ -515,6 +518,8 @@ body {
   margin-top: -100px;
   max-width: 400px;
   background-color: #fff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
+          clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
 }
 
 .news-list__title {
@@ -571,6 +576,6 @@ body {
 
 .col {
   padding: 0 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */

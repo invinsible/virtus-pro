@@ -95,8 +95,9 @@ body {
 }
 
 .label {
-  padding: 6px 0;
-  width: 95px;  
+  padding: 6px 17px;
+  display: inline-block;
+  min-width: 95px;  
   font-size: 1.28em;
   font-weight: 600;
   color: #fff;
@@ -104,8 +105,6 @@ body {
   text-align: center;
   text-transform: uppercase;
   clip-path: polygon(0 0, 87% 0, 100% 40%, 100% 100%, 13% 100%, 0 65%);
-
-  
 
   &--white {
     color: #1F1F1F;
@@ -431,14 +430,16 @@ body {
     color: #1F1F1F;
 
     &:hover {
-      .list-news__title {
+      .news-list__title {
         color: #FC5000;
       }
     }
   }
 
   &__img {
+    position: relative;
     max-width: 400px;
+    z-index: 2;
     clip-path: polygon(96% 0, 100% 7%, 100% 100%, 0% 100%, 0 100%, 0 0);
   }
 
@@ -447,7 +448,8 @@ body {
     margin-left: auto;
     margin-top: -100px;
     max-width: 400px;
-    background-color: #fff;    
+    background-color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
   }
 
   &__title {
@@ -462,7 +464,6 @@ body {
 
 
 $mr: 20px;
-
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -509,5 +510,5 @@ $mr: 20px;
 
 .col {
   padding: 0 $mr/2;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
