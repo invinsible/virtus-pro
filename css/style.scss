@@ -71,6 +71,25 @@ body {
   max-width: 1320px;
 }
 
+.burger, .burger::after, .burger::before  {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all .3s;          
+}
+
+.burger::after {
+  content: '';
+  top: -10px;
+}
+
+.burger::before {
+  content: '';
+  top: 10px;
+}
+
 .promo {
   display: block;
 }
@@ -92,6 +111,17 @@ body {
     color: #1F1F1F;
     background-color: #fff;
   }
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.date {
+  font-size: 1.15em;
+  color: #888888;
 }
 
 .header {  
@@ -217,6 +247,22 @@ body {
 
 .menu-mobile {
   display: none;
+  width: 50px;
+  height: 50px;
+
+  &.active .burger {
+    background-color: transparent;
+  }
+
+  &.active .burger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  &.active .burger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
 
   @media(max-width:1000px) {
     display: block;
@@ -378,13 +424,10 @@ body {
 .news-list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-
-  &__item {
-    flex-basis: 33.333%;
-  }
 
   &__link {
+    display: flex;
+    flex-direction: column;
     color: #1F1F1F;
 
     &:hover {
@@ -394,13 +437,77 @@ body {
     }
   }
 
+  &__img {
+    max-width: 400px;
+    clip-path: polygon(96% 0, 100% 7%, 100% 100%, 0% 100%, 0 100%, 0 0);
+  }
+
   &__description {
-    background-color: #fff;
+    padding: 123px 30px 22px 22px;
+    margin-left: auto;
+    margin-top: -100px;
+    max-width: 400px;
+    background-color: #fff;    
   }
 
   &__title {
+    margin-bottom: 22px;
     font-size: 1.5em;
     transition: color 0.25s;
   }
 
+}
+
+
+
+
+$mr: 20px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + #{$mr});
+  margin-left: -$mr/2;
+  margin-right: -$mr/2;
+
+  &--2 {
+    & > .col {
+      width: 50%;     
+    }
+  }
+
+  &--3 {
+    & > .col {
+      width: 33.33%;
+
+      @media(max-width: 768px) {
+        width: 50%
+      }
+    }
+  }
+
+  &--4 {
+    & > .col {
+      width: 25%;
+
+      @media(max-width: 1024px) {
+        width: 33.33%
+      }
+
+      @media(max-width: 768px) {
+        width: 50%
+      }
+    }
+  }
+
+  &--6 {
+    & > .col {
+      width: 16.66%;
+    }
+  }
+}
+
+.col {
+  padding: 0 $mr/2;
+  margin-bottom: 20px;
 }
