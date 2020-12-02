@@ -111,6 +111,10 @@ body {
 
 .promo {
   display: block;
+
+  &--center {
+    margin-bottom: 40px;
+  }
 }
 
 .label {
@@ -140,6 +144,57 @@ body {
 .date {
   font-size: 1.15em;
   color: #888888;
+}
+
+.filter-post {
+
+  &__form {
+    padding: 20px 0px 12px;
+    background-color: #fff;
+  }
+
+  &__option {
+    padding-left: 40px;
+    margin-bottom: 15px;
+  } 
+
+  &__label {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 2px;
+      width: 16px;
+      height: 15px;
+      border: 1px solid #FC5000;      
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: -21px;
+      top: 5px;
+      width: 10px;
+      height: 9px;
+      background-color: #FC5000;
+      transform: scale(0);
+      transition: transform .18s;
+    }
+  }
+
+  &__input:checked + label {
+    color: #FC5000;
+    &::after {
+      transform: scale(1);
+    }
+  }
 }
 
 .header {  
@@ -400,7 +455,15 @@ body {
   
 }
 
-.big-news {  
+.big-news {
+  padding-top: 70px;
+  margin-bottom: 40px;
+
+  .label {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
 
   &__link {
     display: flex;
@@ -415,6 +478,7 @@ body {
   }
 
   &__img {
+    position: relative;
     flex-basis: 65%;
     clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
   }
