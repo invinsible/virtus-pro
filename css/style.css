@@ -70,6 +70,26 @@ body {
   background-color: #1F2326;
 }
 
+.btn {
+  padding: 14px 46px;
+  display: block;
+  font-size: 1.28em;
+  font-weight: 600;
+  color: #1F2326;
+  background-color: #fff;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  background-color: #FE5000;
+  color: #fff;
+}
+
 .container {
   padding: 0 7px;
   margin: 0 auto;
@@ -616,6 +636,106 @@ body {
   margin: 0 20px;
   font-size: 1.33em;
   font-weight: 700;
+}
+
+.shop-carousel__item {
+  margin-bottom: 0;
+  -webkit-clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
+          clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
+}
+
+.shop-carousel__link {
+  padding: 24px 22px 34px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #F8F8F8;
+  color: #1F2326;
+  text-align: center;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
+}
+
+.shop-carousel__link--btn {
+  background-image: url("/img/shop-btn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shop-carousel__link--btn .btn {
+  margin-top: auto;
+}
+
+.shop-carousel__link:hover {
+  color: #FC5000;
+}
+
+.shop-carousel__link:hover > .shop-carousel__img {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.shop-carousel__img {
+  margin-bottom: 25px;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.shop-carousel__name {
+  max-width: 230px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.main-fan {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.main-fan__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.main-fan__wrapper .bold {
+  margin: 30px 0 17px;
+  font-size: 1.33em;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.main-fan__title {
+  margin-bottom: 20px;
+  font-size: 2em;
+  font-weight: 800;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.main-fan__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .row {

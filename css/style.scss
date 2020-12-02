@@ -65,6 +65,25 @@ body {
   background-color: #1F2326;
 }
 
+.btn {
+  padding: 14px 46px;
+  display: block;
+  font-size: 1.28em;
+  font-weight: 600;
+  color: #1F2326;
+  background-color: #fff;
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: #FE5000;
+    color: #fff;
+  }
+}
+
 .container {
   padding: 0 7px;;
   margin: 0 auto;
@@ -538,6 +557,88 @@ body {
     margin: 0 20px;
     font-size: 1.33em;
     font-weight: 700;
+  }
+}
+
+.shop-carousel {
+
+  &__item {
+    margin-bottom: 0;
+    clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
+  }
+  
+  &__link {
+    padding: 24px 22px 34px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F8F8F8;
+    color: #1F2326;
+    text-align: center;
+    transition: color 0.25s;
+
+    &--btn {      
+      background-image: url('/img/shop-btn.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .btn {
+        margin-top: auto;
+      }
+    }
+
+    &:hover {
+      color: #FC5000;
+
+      & > .shop-carousel__img {
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  &__img {
+    margin-bottom: 25px;
+    transition: transform 0.25s;
+  }
+
+  &__name {    
+    max-width: 230px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+.main-fan {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    .bold {
+      margin: 30px 0 17px;
+      font-size: 1.33em;
+      font-weight: 800;
+      font-style: italic;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    display: flex;
   }
 }
 
