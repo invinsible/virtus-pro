@@ -637,6 +637,8 @@ body {
     padding: 10px 20px;
 
     .date {
+      font-size: 18px;
+      font-weight: 500;
       color: #1F2326;
     }    
   }
@@ -763,6 +765,80 @@ body {
 
   &__links {
     display: flex;
+  }
+}
+
+.matches { 
+  max-width: 970px;  
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    padding: 20px 120px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1F2326;
+    background-color: #fff;
+
+    .post-meta {
+      flex-direction: column;
+
+      .date {
+        margin-top: 15px;
+        font-weight: 500;
+        color: #1F2326;
+      }
+    }
+  }
+
+  &__versus {
+    display: flex;
+    align-items: center;
+
+    .score {
+      margin:0 30px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .matches__team:nth-of-type(1) {
+      .team-name {margin-right: 15px;}
+    }
+
+    .matches__team:nth-of-type(2) {
+      flex-direction: row-reverse;
+
+      .team-name {margin-left: 15px;}
+    }
+  }
+
+  &__team {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    .team-name {      
+      max-width: 100px;
+    }
+
+    .team-logo {
+      width: 40px;
+    }
+  }
+
+  &__info {
+    font-size: 16px;
+    font-weight: 500;
+
+    .stage {
+      margin-top: 11px;
+      font-size: 0.75em;
+      text-transform: uppercase;
+    }
   }
 }
 

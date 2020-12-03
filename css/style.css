@@ -729,6 +729,8 @@ body {
 }
 
 .match-item .post-meta .date {
+  font-size: 18px;
+  font-weight: 500;
   color: #1F2326;
 }
 
@@ -878,6 +880,102 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.matches {
+  max-width: 970px;
+}
+
+.matches__item {
+  margin-bottom: 20px;
+}
+
+.matches__link {
+  padding: 20px 120px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #1F2326;
+  background-color: #fff;
+}
+
+.matches__link .post-meta {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.matches__link .post-meta .date {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #1F2326;
+}
+
+.matches__versus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.matches__versus .score {
+  margin: 0 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.matches__versus .matches__team:nth-of-type(1) .team-name {
+  margin-right: 15px;
+}
+
+.matches__versus .matches__team:nth-of-type(2) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.matches__versus .matches__team:nth-of-type(2) .team-name {
+  margin-left: 15px;
+}
+
+.matches__team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.matches__team .team-name {
+  max-width: 100px;
+}
+
+.matches__team .team-logo {
+  width: 40px;
+}
+
+.matches__info {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.matches__info .stage {
+  margin-top: 11px;
+  font-size: 0.75em;
+  text-transform: uppercase;
 }
 
 .row {
