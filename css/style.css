@@ -160,8 +160,12 @@ body {
   color: #888888;
 }
 
+.filter-post {
+  position: relative;
+}
+
 .filter-post__btn {
-  padding: 4px 15px;
+  padding: 4px 19px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,8 +179,8 @@ body {
   border: 0;
   outline: 0;
   cursor: pointer;
-  -webkit-clip-path: polygon(0 0, 90% 0, 100% 8%, 100% 100%, 9% 100%, 0 94%);
-          clip-path: polygon(0 0, 90% 0, 100% 8%, 100% 100%, 9% 100%, 0 94%);
+  -webkit-clip-path: polygon(0 0, 96% 0, 100% 27%, 100% 100%, 5% 100%, 0 80%);
+          clip-path: polygon(0 0, 96% 0, 100% 27%, 100% 100%, 5% 100%, 0 80%);
 }
 
 .filter-post__btn img {
@@ -191,8 +195,18 @@ body {
 }
 
 .filter-post__form {
+  position: absolute;
+  top: 100%;
+  left: 20px;
   padding: 20px 0px 12px;
+  margin-top: 4px;
+  display: none;
   background-color: #fff;
+  z-index: 3;
+}
+
+.filter-post__form.active {
+  display: block;
 }
 
 .filter-post__option {

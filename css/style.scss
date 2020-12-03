@@ -147,9 +147,10 @@ body {
 }
 
 .filter-post {
+  position: relative;
 
   &__btn {
-    padding: 4px 15px;
+    padding: 4px 19px;
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -159,7 +160,7 @@ body {
     border: 0;
     outline: 0;
     cursor: pointer;
-    clip-path: polygon(0 0, 90% 0, 100% 8%, 100% 100%, 9% 100%, 0 94%);
+    clip-path: polygon(0 0, 96% 0, 100% 27%, 100% 100%, 5% 100%, 0 80%);
 
     img {
       margin-right: 10px;
@@ -174,8 +175,18 @@ body {
   }
 
   &__form {
+    position: absolute;
+    top: 100%;    
+    left: 20px;   
     padding: 20px 0px 12px;
+    margin-top: 4px;
+    display: none;
     background-color: #fff;
+    z-index: 3;
+
+    &.active {
+      display: block;
+    }
   }
 
   &__option {
