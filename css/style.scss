@@ -922,6 +922,56 @@ h2 {
   }
 }
 
+.match-detail {
+  position: relative;
+  padding: 20px;
+  background-color: #fff; 
+  
+  .label {
+    position: absolute;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    max-width: 530px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__title,
+  &__tournament {
+    font-size: 1.33em;
+    text-align: center;
+  }
+
+  &__tournament {
+    margin: 10px 0 24px;
+  }
+
+  &__score {
+    font-size: 2.33em;
+  }
+
+  &__versus {
+    padding-bottom: 38px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #1F2326;
+  }
+}
+
+.two-columns-list {
+
+  &__item {
+    padding: 5px 0;
+    max-width: 240px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 $mr: 20px;

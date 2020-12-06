@@ -1068,6 +1068,58 @@ h2 {
   color: #fff;
 }
 
+.match-detail {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.match-detail .label {
+  position: absolute;
+}
+
+.match-detail__wrapper {
+  margin: 0 auto;
+  max-width: 530px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.match-detail__title, .match-detail__tournament {
+  font-size: 1.33em;
+  text-align: center;
+}
+
+.match-detail__tournament {
+  margin: 10px 0 24px;
+}
+
+.match-detail__score {
+  font-size: 2.33em;
+}
+
+.match-detail__versus {
+  padding-bottom: 38px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 2px solid #1F2326;
+}
+
+.two-columns-list__item {
+  padding: 5px 0;
+  max-width: 240px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
