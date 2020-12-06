@@ -963,6 +963,7 @@ h2 {
 }
 
 .two-columns-list {
+  column-count: 2;
 
   &__item {
     padding: 5px 0;
