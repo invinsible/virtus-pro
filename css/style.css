@@ -70,6 +70,21 @@ body {
   background-color: #1F2326;
 }
 
+h1 {
+  margin-bottom: 22px;
+  font-size: 1.71em;
+  font-weight: 700;
+  color: #fff;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.28em;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+
 .btn {
   padding: 14px 46px;
   display: block;
@@ -162,6 +177,7 @@ body {
 
 .filter-post {
   position: relative;
+  margin-bottom: 30px;
 }
 
 .filter-post__btn {
@@ -893,8 +909,7 @@ body {
 }
 
 .matches {
-  margin: 0 auto;
-  max-width: 970px;
+  margin-bottom: 70px;
 }
 
 .matches__item {
@@ -902,7 +917,7 @@ body {
 }
 
 .matches__item:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .matches__link {
@@ -993,6 +1008,66 @@ body {
   text-transform: uppercase;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination__nav {
+  padding: 0;
+  border-style: solid;
+  background-color: transparent;
+  outline: 0;
+  cursor: pointer;
+}
+
+.pagination__nav.left {
+  margin-right: 20px;
+  border-width: 9px 15.6px 9px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.pagination__nav.right {
+  margin-left: 20px;
+  border-width: 9px 0 9px 15.6px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.pagination__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pagination__item {
+  margin: 0 7px;
+  -webkit-clip-path: polygon(0 0, 79% 0, 100% 13%, 100% 100%, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 79% 0, 100% 13%, 100% 100%, 0% 100%, 0 100%);
+}
+
+.pagination__item.active > .pagination__link {
+  background-color: #fff;
+  color: #1F2326;
+}
+
+.pagination__link {
+  padding: 15px 17px;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1041,5 +1116,13 @@ body {
 .col {
   padding: 0 10px;
   margin-bottom: 40px;
+}
+
+.test {
+  padding: 50px 0;
+}
+
+.test__half {
+  max-width: 970px;
 }
 /*# sourceMappingURL=style.css.map */

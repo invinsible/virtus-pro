@@ -306,62 +306,171 @@
     </section>
 
 
-    <section class="matches">
+    <section class="test">
       <div class="container">
         <h1>Матчи</h1>
-        <ul class="matches">
-          <li class="matches__item">
-            <a class="matches__link" href="#">
-              <div class="post-meta">
-                <div class="label">Cs:GO</div>
-                <p class="date">04.09.20</p>
-              </div>
-              <div class="matches__versus">
-                <div class="matches__team">
-                  <p class="team-name">Virtus.Pro</p>
-                  <img class="team-logo" src="/img/match-item1.png" alt="">
+        <div class="filter-post">
+          <button class="filter-post__btn" type="button">
+            Все матчи            
+          </button>
+          <form class="filter-post__form" action="#">
+            <div class="filter-post__option">              
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id1">
+              <label class="filter-post__label filter-post__label--text" for="id1">Новости клуба</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id2">
+              <label class="filter-post__label" for="id2">Dota 2</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id3">
+              <label class="filter-post__label" for="id3">Cs:Go</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id4">
+              <label class="filter-post__label" for="id4">Fortnite</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id5">
+              <label class="filter-post__label" for="id5">Dota 2</label>                
+            </div>
+            <button class="filter-post__reset" type="reset">Сбросить</button>
+          </form>
+        </div>
+        <div class="test__half">
+          <ul class="matches">
+            <li class="matches__item">
+              <a class="matches__link" href="#">
+                <div class="post-meta">
+                  <div class="label">Cs:GO</div>
+                  <p class="date">04.09.20</p>
                 </div>
-                <p class="score">
-                  <span class="firstScore">1</span> - <span class="secondScore">0</span>
-                </p>
-                <div class="matches__team">
-                  <p class="team-name">Gambit Youngsterss</p>
-                  <img class="team-logo" src="/img/match-item2.png" alt="">
+                <div class="matches__versus">
+                  <div class="matches__team">
+                    <p class="team-name">Virtus.Pro</p>
+                    <img class="team-logo" src="/img/match-item1.png" alt="">
+                  </div>
+                  <p class="score">
+                    <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                  </p>
+                  <div class="matches__team">
+                    <p class="team-name">Gambit Youngsterss</p>
+                    <img class="team-logo" src="/img/match-item2.png" alt="">
+                  </div>
                 </div>
-              </div>
-              <div class="matches__info">
-                <p class="tournament">The International 2020</p>
-                <p class="stage">ПЛЕЙ-ОФФ</p>
-              </div>
-            </a>
-          </li>
+                <div class="matches__info">
+                  <p class="tournament">The International 2020</p>
+                  <p class="stage">ПЛЕЙ-ОФФ</p>
+                </div>
+              </a>
+            </li>
+  
+            <li class="matches__item">
+              <a class="matches__link" href="#">
+                <div class="post-meta">
+                  <div class="label">Cs:GO</div>
+                  <p class="date">04.09.20</p>
+                </div>
+                <div class="matches__versus">
+                  <div class="matches__team">
+                    <p class="team-name">Virtus.Pro</p>
+                    <img class="team-logo" src="/img/match-item1.png" alt="">
+                  </div>
+                  <p class="score">
+                    <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                  </p>
+                  <div class="matches__team">
+                    <p class="team-name">Gambit Youngsterss</p>
+                    <img class="team-logo" src="/img/match-item2.png" alt="">
+                  </div>
+                </div>
+                <div class="matches__info">
+                  <p class="tournament">The International 2020</p>
+                  <p class="stage">ПЛЕЙ-ОФФ</p>
+                </div>
+              </a>
+            </li>
+          </ul>
 
-          <li class="matches__item">
-            <a class="matches__link" href="#">
-              <div class="post-meta">
-                <div class="label">Cs:GO</div>
-                <p class="date">04.09.20</p>
-              </div>
-              <div class="matches__versus">
-                <div class="matches__team">
-                  <p class="team-name">Virtus.Pro</p>
-                  <img class="team-logo" src="/img/match-item1.png" alt="">
+          <h2>Прошедшие матчи</h2>
+          <ul class="matches">
+            <li class="matches__item">
+              <a class="matches__link" href="#">
+                <div class="post-meta">
+                  <div class="label">Cs:GO</div>
+                  <p class="date">04.09.20</p>
                 </div>
-                <p class="score">
-                  <span class="firstScore">1</span> - <span class="secondScore">0</span>
-                </p>
-                <div class="matches__team">
-                  <p class="team-name">Gambit Youngsterss</p>
-                  <img class="team-logo" src="/img/match-item2.png" alt="">
+                <div class="matches__versus">
+                  <div class="matches__team">
+                    <p class="team-name">Virtus.Pro</p>
+                    <img class="team-logo" src="/img/match-item1.png" alt="">
+                  </div>
+                  <p class="score">
+                    <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                  </p>
+                  <div class="matches__team">
+                    <p class="team-name">Gambit Youngsterss</p>
+                    <img class="team-logo" src="/img/match-item2.png" alt="">
+                  </div>
                 </div>
-              </div>
-              <div class="matches__info">
-                <p class="tournament">The International 2020</p>
-                <p class="stage">ПЛЕЙ-ОФФ</p>
-              </div>
-            </a>
-          </li>
-        </ul>
+                <div class="matches__info">
+                  <p class="tournament">The International 2020</p>
+                  <p class="stage">ПЛЕЙ-ОФФ</p>
+                </div>
+              </a>
+            </li>
+  
+            <li class="matches__item">
+              <a class="matches__link" href="#">
+                <div class="post-meta">
+                  <div class="label">Cs:GO</div>
+                  <p class="date">04.09.20</p>
+                </div>
+                <div class="matches__versus">
+                  <div class="matches__team">
+                    <p class="team-name">Virtus.Pro</p>
+                    <img class="team-logo" src="/img/match-item1.png" alt="">
+                  </div>
+                  <p class="score">
+                    <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                  </p>
+                  <div class="matches__team">
+                    <p class="team-name">Gambit Youngsterss</p>
+                    <img class="team-logo" src="/img/match-item2.png" alt="">
+                  </div>
+                </div>
+                <div class="matches__info">
+                  <p class="tournament">The International 2020</p>
+                  <p class="stage">ПЛЕЙ-ОФФ</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <div class="pagination">
+            <button class="pagination__nav left" aria-label="Предыдущая страница"></button>
+            <ul class="pagination__list">
+              <li class="pagination__item ">
+                <a class="pagination__link" href="#">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">2</a>
+              </li>
+              <li class="pagination__item active">
+                <a class="pagination__link" href="#">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__link" href="#">4</a>
+              </li>
+            </ul>
+            <button class="pagination__nav right" aria-label="Следующая страница"></button>
+          </div>
+        </div>
+        
       </div>
     </section>
 
