@@ -959,8 +959,10 @@ h2 {
 
 .matches__versus .score {
   margin: 0 30px;
+  width: 37px;
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
 }
 
 .matches__versus .matches__team:nth-of-type(1) .team-name {
@@ -1071,6 +1073,7 @@ h2 {
 .match-detail {
   position: relative;
   padding: 20px;
+  margin-bottom: 30px;
   background-color: #fff;
 }
 
@@ -1091,11 +1094,16 @@ h2 {
 }
 
 .match-detail__tournament {
-  margin: 10px 0 24px;
+  margin: 10px 0 35px;
+}
+
+.match-detail__mid {
+  margin: 0 55px;
 }
 
 .match-detail__score {
   font-size: 2.33em;
+  text-align: center;
 }
 
 .match-detail__versus {
@@ -1113,16 +1121,98 @@ h2 {
   border-bottom: 2px solid #1F2326;
 }
 
-.two-columns-list {
-  -webkit-column-count: 2;
-          column-count: 2;
+.match-detail__team-logo {
+  margin: 0 auto 17px auto;
 }
 
-.two-columns-list__item {
+.match-detail__players {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.match-detail__players .half {
+  margin: 0 20px;
+}
+
+.match-detail__players li {
   padding: 5px 0;
-  max-width: 240px;
+  max-width: 250px;
   font-size: 12px;
+  font-weight: 400;
+}
+
+.awards {
+  margin-bottom: 40px;
+}
+
+.awards__item {
+  padding: 15px 35px 15px 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
   font-weight: 500;
+  background-color: #fff;
+}
+
+.awards__item:last-child {
+  margin-bottom: 0;
+}
+
+.awards .label {
+  max-width: 170px;
+  font-size: 18px;
+}
+
+.awards__logo {
+  margin-right: 30px;
+  max-width: 40px;
+}
+
+.awards__rate {
+  margin: 0 30px;
+  width: 57px;
+  font-size: 1.12em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.awards__rate span {
+  display: none;
+}
+
+.awards__game {
+  width: 170px;
+  text-align: center;
+}
+
+.awards__tournament {
+  width: 217px;
+}
+
+.awards__place {
+  margin: 0 60px;
+  width: 165px;
+}
+
+.awards__date {
+  width: 170px;
+}
+
+.awards__money {
+  width: 128px;
+  margin-left: auto;
 }
 
 .row {

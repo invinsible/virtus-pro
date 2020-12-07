@@ -830,8 +830,10 @@ h2 {
 
     .score {
       margin:0 30px;
+      width: 37px;
       font-size: 18px;
       font-weight: 700;
+      text-align: center;
     }
 
     .matches__team:nth-of-type(1) {
@@ -925,6 +927,7 @@ h2 {
 .match-detail {
   position: relative;
   padding: 20px;
+  margin-bottom: 30px;
   background-color: #fff; 
   
   .label {
@@ -945,11 +948,16 @@ h2 {
   }
 
   &__tournament {
-    margin: 10px 0 24px;
+    margin: 10px 0 35px;
+  }
+
+  &__mid {
+    margin: 0 55px;
   }
 
   &__score {
     font-size: 2.33em;
+    text-align: center;
   }
 
   &__versus {
@@ -960,16 +968,92 @@ h2 {
     justify-content: center;
     border-bottom: 2px solid #1F2326;
   }
+
+  &__team-logo {
+    margin: 0 auto 17px auto;
+  }
+
+  &__players {  
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .half {
+      margin: 0 20px;
+    }
+
+    li {
+      padding: 5px 0;
+      max-width: 250px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
 }
 
-.two-columns-list {
-  column-count: 2;
+
+.awards {
+  margin-bottom: 40px;
 
   &__item {
-    padding: 5px 0;
-    max-width: 240px;
-    font-size: 12px;
+    padding: 15px 35px 15px 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;    
+
+    font-size: 16px;
     font-weight: 500;
+    background-color: #fff;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .label {
+    max-width: 170px;
+    font-size: 18px;    
+  }
+
+  &__logo {
+    margin-right: 30px;
+    max-width: 40px;
+  }
+
+  &__rate {
+    margin: 0 30px;
+    width: 57px;
+    font-size: 1.12em;
+    font-weight: 700;
+    text-align: center;
+
+    span {
+      display: none;
+    }
+  }
+
+  &__game {
+    width: 170px;
+    text-align: center;
+  }
+
+  &__tournament {
+    width: 217px;
+  }
+
+  &__place {
+    margin: 0 60px;
+    width: 165px;
+  }
+
+  &__date {
+    width: 170px;
+  }
+
+  &__money {
+    width: 128px;
+    margin-left: auto;
   }
 }
 
