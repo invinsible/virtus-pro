@@ -1292,6 +1292,64 @@ h2 {
   line-height: 28px;
 }
 
+.players__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+}
+
+.players__link:hover > .players__img {
+  -webkit-box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4);
+          box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4);
+}
+
+.players__role {
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.players__name {
+  margin-bottom: 15px;
+  font-size: 1.33em;
+  font-weight: 700;
+}
+
+.players__img {
+  min-height: 388px;
+  padding-top: 34px;
+  height: 100%;
+  background-color: #F8F8F8;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+}
+
+.players__img img {
+  margin: 0 auto -1px;
+}
+
+.players__img.no-photo {
+  background-image: url("/img/no-photo-player.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+@media (max-width: 1024px) {
+  .players__img {
+    min-height: 283px;
+  }
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;

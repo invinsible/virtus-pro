@@ -1121,6 +1121,58 @@ h2 {
   }
 }
 
+.players {
+
+  
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 18px;
+    color: #fff;
+
+    &:hover > .players__img{
+      box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__role {
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 1.33em;
+    font-weight: 700;
+  }
+
+  &__img {
+    min-height: 388px;
+    padding-top: 34px;
+    height: 100%;    
+    background-color: #F8F8F8;
+    transition: box-shadow 0.25s;
+
+    img {
+      margin: 0 auto -1px;
+    }
+
+    &.no-photo {      
+      background-image: url('/img/no-photo-player.png');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+    }
+
+    @media (max-width: 1024px) {
+      min-height: 283px;
+    }
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 $mr: 20px;
