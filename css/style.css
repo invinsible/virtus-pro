@@ -1068,6 +1068,12 @@ h2 {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.pagination__link:hover {
+  background-color: #757575;
 }
 
 .match-detail {
@@ -1170,6 +1176,14 @@ h2 {
   margin-bottom: 0;
 }
 
+.awards__item--first {
+  padding: 5px 35px 5px 20px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .awards .label {
   max-width: 170px;
   font-size: 18px;
@@ -1183,9 +1197,11 @@ h2 {
 .awards__rate {
   margin: 0 30px;
   width: 57px;
-  font-size: 1.12em;
-  font-weight: 700;
   text-align: center;
+}
+
+.awards__rate b {
+  font-size: 1.12em;
 }
 
 .awards__rate span {
@@ -1213,6 +1229,34 @@ h2 {
 .awards__money {
   width: 128px;
   margin-left: auto;
+}
+
+.sort {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.sort::after {
+  content: '';
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: #ffffff transparent transparent transparent;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
+}
+
+.sort.active::after {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .row {
