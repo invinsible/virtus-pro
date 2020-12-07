@@ -1092,6 +1092,35 @@ h2 {
   }
 }
 
+.inner-up {
+  padding: 30px 40px 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  background-color: #fff;
+
+  h1 {
+    margin-left: 24px;
+    color: #1F2326;
+    font-size: 2.66em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 60px;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    line-height: 28px;
+  }
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 
 $mr: 20px;

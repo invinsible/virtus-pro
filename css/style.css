@@ -1259,6 +1259,39 @@ h2 {
           transform: rotate(-180deg);
 }
 
+.inner-up {
+  padding: 30px 40px 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  background-color: #fff;
+}
+
+.inner-up h1 {
+  margin-left: 24px;
+  color: #1F2326;
+  font-size: 2.66em;
+  text-transform: uppercase;
+}
+
+.inner-up__title {
+  margin-bottom: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inner-up__title img {
+  max-width: 60px;
+}
+
+.inner-up__text {
+  max-width: 600px;
+  line-height: 28px;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
