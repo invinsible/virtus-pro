@@ -918,8 +918,10 @@ h2 {
 
     .score {
       margin:0 30px;
+      width: 37px;
       font-size: 18px;
       font-weight: 700;
+      text-align: center;
     }
 
     .matches__team:nth-of-type(1) {
@@ -1007,12 +1009,18 @@ h2 {
     font-size: 16px;
     font-weight: 700;
     color: #fff;
+    transition: background-color 0.25s;
+
+    &:hover {
+      background-color: #757575;
+    }
   }
 }
 
 .match-detail {
   position: relative;
   padding: 20px;
+  margin-bottom: 30px;
   background-color: #fff; 
   
   .label {
@@ -1033,11 +1041,16 @@ h2 {
   }
 
   &__tournament {
-    margin: 10px 0 24px;
+    margin: 10px 0 35px;
+  }
+
+  &__mid {
+    margin: 0 55px;
   }
 
   &__score {
     font-size: 2.33em;
+    text-align: center;
   }
 
   &__versus {
@@ -1048,16 +1061,203 @@ h2 {
     justify-content: center;
     border-bottom: 2px solid #1F2326;
   }
+
+  &__team-logo {
+    margin: 0 auto 17px auto;
+  }
+
+  &__players {  
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    .half {
+      margin: 0 20px;
+    }
+
+    li {
+      padding: 5px 0;
+      max-width: 250px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
 }
 
-.two-columns-list {
-  column-count: 2;
+
+.awards {
+  margin-bottom: 40px;
 
   &__item {
-    padding: 5px 0;
-    max-width: 240px;
-    font-size: 12px;
+    padding: 15px 35px 15px 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: center;    
+
+    font-size: 16px;
     font-weight: 500;
+    background-color: #fff;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--first {
+      padding: 5px 35px 5px 20px;
+      background-color: transparent;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .label {
+    max-width: 170px;
+    font-size: 18px;    
+  }
+
+  &__logo {
+    margin-right: 30px;
+    max-width: 40px;
+  }
+
+  &__rate {
+    margin: 0 30px;
+    width: 57px;    
+    text-align: center;
+
+    b {
+      font-size: 1.12em;    
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  &__game {
+    width: 170px;
+    text-align: center;
+  }
+
+  &__tournament {
+    width: 217px;
+  }
+
+  &__place {
+    margin: 0 60px;
+    width: 165px;
+  }
+
+  &__date {
+    width: 170px;
+  }
+
+  &__money {
+    width: 128px;
+    margin-left: auto;
+  }
+}
+
+.sort {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: ''; 
+    margin-left: 5px;   
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: #ffffff transparent transparent transparent;
+    transition: transform 0.25s;
+  }
+
+  &.active::after {
+    transform: rotate(-180deg);
+  }
+}
+
+.inner-up {
+  padding: 30px 40px 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  background-color: #fff;
+
+  h1 {
+    margin-left: 24px;
+    color: #1F2326;
+    font-size: 2.66em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+
+    img {
+      max-width: 60px;
+    }
+  }
+
+  &__text {
+    max-width: 600px;
+    line-height: 28px;
+  }
+}
+
+.players {
+
+  
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 18px;
+    color: #fff;
+
+    &:hover > .players__img{
+      box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  &__role {
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 1.33em;
+    font-weight: 700;
+  }
+
+  &__img {
+    min-height: 388px;
+    padding-top: 34px;
+    height: 100%;    
+    background-color: #F8F8F8;
+    transition: box-shadow 0.25s;
+
+    img {
+      margin: 0 auto -1px;
+    }
+
+    &.no-photo {      
+      background-image: url('/img/no-photo-player.png');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+    }
+
+    @media (max-width: 1024px) {
+      min-height: 283px;
+    }
   }
 }
 
