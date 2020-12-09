@@ -104,9 +104,13 @@ h2 {
 }
 
 .container {
-  padding: 0 7px;;
+  padding: 0 7px;
   margin: 0 auto;
   max-width: 1320px;
+
+  @media(max-width: 1024px) {
+    padding: 0 27px;
+  }
 }
 
 .burger, .burger::after, .burger::before  {
@@ -516,7 +520,7 @@ h2 {
     position: absolute;
     left: 0;
     top: 50%;
-    width: 97%;
+    width: 100%;
     height: 100%;
     display: none;
     transform: translateY(-50%);
@@ -867,6 +871,10 @@ h2 {
       font-style: italic;
       text-transform: uppercase;
     }
+  }
+
+  &__left {
+    max-width: 638px;
   }
 
   &__title {
@@ -1283,6 +1291,10 @@ $mr: 20px;
 
       @media(max-width: 768px) {
         width: 50%
+      }
+
+      @media(max-width: 550px) {
+        width: 100%
       }
     }
   }
