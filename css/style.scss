@@ -133,7 +133,9 @@ h2 {
 }
 
 .promo {
+  position: relative;
   display: block;
+  z-index: 40;
 
   &--center {
     margin-bottom: 40px;
@@ -519,13 +521,18 @@ h2 {
   &__item {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: -50%;
     width: 100%;
     height: 100%;
-    display: none;
+    display: block;
     transform: translateY(-50%);
     background-color: #FC5000;
     z-index: 10;
+    transition: top 0.2s linear;
+
+    &.active {
+      top: 50%;
+    }
 
     @media(max-width: 1000px) {
       height: 80px;
@@ -559,6 +566,7 @@ h2 {
   }
 
   &__btn {
+    position: relative
     padding: 17px;
     margin-right: 25px;
     display: block;        
@@ -569,6 +577,7 @@ h2 {
     border: 0;
     outline: 0;
     cursor: pointer;
+    z-index: 11;
     transition: opacity 0.25s;
 
     &:hover {
@@ -1107,6 +1116,8 @@ h2 {
     font-weight: 500;
     background-color: #fff;
 
+    clip-path: polygon(0 0, 99% 0, 100% 16%, 100% 100%, 1% 100%, 0 84%);
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -1193,16 +1204,17 @@ h2 {
   margin-bottom: 40px;
   font-size: 18px;
   background-color: #fff;
+  clip-path: polygon(0 0, 99% 0, 100% 5%, 100% 100%, 1% 100%, 0 95%);
 
   h1 {
+    margin-bottom: 0;
     margin-left: 24px;
     color: #1F2326;
     font-size: 2.66em;
     text-transform: uppercase;
   }
 
-  &__title {
-    margin-bottom: 22px;
+  &__title {    
     display: flex;
     align-items: center;
 
@@ -1212,6 +1224,7 @@ h2 {
   }
 
   &__text {
+    margin-top: 22px;
     max-width: 600px;
     line-height: 28px;
   }
