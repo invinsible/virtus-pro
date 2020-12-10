@@ -1269,6 +1269,48 @@ h2 {
   }
 }
 
+.tabs {
+
+  &-nav {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+      padding: 6px 28px;
+      margin-right: 30px;
+      font-size: 18px;
+      font-weight: 600;
+      background-color: #8a8a8a;
+      text-transform: uppercase;
+      text-align: center;
+      border: 0;
+      outline: 0;      
+      cursor: pointer;
+      clip-path: polygon(0 0, 87% 0, 100% 40%, 100% 100%, 13% 100%, 0 65%);
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #fff;
+      }
+
+      &.active {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__content {
+    padding: 30px 0;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+
+
 ////////////////////////////////////////////////////////////////////////////////
 
 $mr: 20px;
