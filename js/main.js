@@ -49,3 +49,13 @@ const tab = function() {
 };
 
 tab();
+
+const partnersItems = document.querySelectorAll('.partners__item');
+
+if(partnersItems.length >= 5) { 
+
+  for (let i = 0; i < 3; i++) {
+    partnersItems[i].classList.add('partners__item--big')
+  }
+
+}

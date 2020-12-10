@@ -899,6 +899,10 @@ h2 {
 
   &__links {
     display: flex;
+
+    a {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -1325,6 +1329,36 @@ h2 {
   }
 }
 
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0 3% 50px 3%;    
+    display: block;
+
+    &--big {
+      margin: 0 0 50px;
+      width: 33%;
+    }
+  }
+
+  &__link {
+    display: block;
+    filter: grayscale(1);
+    transition: filter 0.25s;
+
+    img {
+      margin: 0 auto;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }  
+}
 
 .footer {
   padding-bottom: 60px;
