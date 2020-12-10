@@ -495,7 +495,7 @@ h2 {
     top: 100%;
     left: -100%;
     padding: 25px 0 !important;
-    width: 30%;
+    width: 55%;
     height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1184,6 +1184,21 @@ h2 {
   color: #1F2326;
 }
 
+@media (max-width: 880px) {
+  .matches__link {
+    padding: 20px 3% 20px 20px;
+  }
+}
+
+@media (max-width: 570px) {
+  .matches__link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .matches__versus {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1231,8 +1246,24 @@ h2 {
   max-width: 100px;
 }
 
+@media (max-width: 880px) {
+  .matches__team .team-name {
+    margin: 5px 0 0 !important;
+    text-align: center;
+  }
+}
+
 .matches__team .team-logo {
   width: 40px;
+}
+
+@media (max-width: 880px) {
+  .matches__team {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
 }
 
 .matches__info {
@@ -1244,6 +1275,13 @@ h2 {
   margin-top: 11px;
   font-size: 0.75em;
   text-transform: uppercase;
+}
+
+@media (max-width: 880px) {
+  .matches__info {
+    font-size: 14px;
+    text-align: right;
+  }
 }
 
 .pagination {

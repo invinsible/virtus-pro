@@ -433,7 +433,7 @@ h2 {
     top: 100%;
     left: -100%;
     padding: 25px 0!important;
-    width: 30%;
+    width: 55%;
     height: 100vh;
     flex-direction: column;
     align-items: flex-start;
@@ -445,6 +445,8 @@ h2 {
       left: 0;
     }
   }
+
+  
 }
 
 .menu-sub {
@@ -1001,6 +1003,14 @@ h2 {
         color: #1F2326;
       }
     }
+
+    @media(max-width: 880px) {
+      padding: 20px 3% 20px 20px;
+    }
+
+    @media(max-width: 570px) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__versus {
@@ -1021,7 +1031,6 @@ h2 {
 
     .matches__team:nth-of-type(2) {
       flex-direction: row-reverse;
-
       .team-name {margin-left: 15px;}
     }
   }
@@ -1034,10 +1043,19 @@ h2 {
 
     .team-name {      
       max-width: 100px;
+
+      @media(max-width: 880px) {
+        margin: 5px 0 0!important;
+        text-align: center;
+      }
     }
 
     .team-logo {
       width: 40px;
+    }
+
+    @media(max-width: 880px) {
+      flex-direction: column-reverse!important;
     }
   }
 
@@ -1049,6 +1067,11 @@ h2 {
       margin-top: 11px;
       font-size: 0.75em;
       text-transform: uppercase;
+    }
+
+    @media(max-width: 880px) {
+      font-size: 14px;
+      text-align: right;
     }
   }
 }
