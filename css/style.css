@@ -117,7 +117,7 @@ h2 {
 
 @media (max-width: 1024px) {
   .container {
-    padding: 0 27px;
+    padding: 0 23px;
   }
 }
 
@@ -747,6 +747,12 @@ h2 {
   margin-bottom: 40px;
 }
 
+@media (max-width: 850px) {
+  .big-news .post-meta {
+    display: none;
+  }
+}
+
 .big-news .label {
   position: absolute;
   right: 20px;
@@ -767,6 +773,14 @@ h2 {
   color: #FC5000;
 }
 
+@media (max-width: 950px) {
+  .big-news__link {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
 .big-news__img {
   position: relative;
   -ms-flex-preferred-size: 65%;
@@ -775,19 +789,54 @@ h2 {
           clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
 }
 
+@media (max-width: 950px) {
+  .big-news__img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
 .big-news__description {
   padding: 40px 40px 35px 20px;
   margin-top: 7%;
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   background-color: #fff;
-  font-size: 16px;
   -webkit-clip-path: polygon(0 0, 96% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%);
           clip-path: polygon(0 0, 96% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%);
 }
 
+@media (max-width: 1040px) {
+  .big-news__description {
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  .big-news__description {
+    padding: 20px 30px 22px 20px;
+    margin-top: 0;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
 .big-news__text {
   margin-bottom: 50px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 1040px) {
+  .big-news__text {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .big-news__text {
+    font-size: 14px;
+  }
 }
 
 .big-news__title {
@@ -795,6 +844,13 @@ h2 {
   font-size: 1.5em;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
+}
+
+@media (max-width: 1040px) {
+  .big-news__title {
+    margin-bottom: 13px;
+    font-size: 1.2em;
+  }
 }
 
 .orange {
@@ -846,9 +902,15 @@ h2 {
 
 .news-list__title {
   margin-bottom: 22px;
-  font-size: 1.5em;
+  font-size: 24px;
   -webkit-transition: color 0.25s;
   transition: color 0.25s;
+}
+
+@media (max-width: 1024px) {
+  .news-list__title {
+    font-size: 20px;
+  }
 }
 
 .main-matches .col {

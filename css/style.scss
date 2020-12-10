@@ -109,7 +109,7 @@ h2 {
   max-width: 1320px;
 
   @media(max-width: 1024px) {
-    padding: 0 27px;
+    padding: 0 23px;
   }
 }
 
@@ -646,6 +646,12 @@ h2 {
   padding-top: 70px;
   margin-bottom: 40px;
 
+  .post-meta {
+    @media(max-width: 850px) {
+      display: none;
+    }
+  }
+
   .label {
     position: absolute;
     right: 20px;
@@ -662,12 +668,20 @@ h2 {
         color: #FC5000;
       }      
     }
+
+    @media(max-width: 950px) {
+      align-items: stretch;
+    }
   }
 
   &__img {
     position: relative;
     flex-basis: 65%;
     clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
+
+    @media(max-width: 950px) {
+      flex-basis: 50%;
+    }
   }
 
   &__description {
@@ -675,18 +689,42 @@ h2 {
     margin-top: 7%;
     flex-basis: 35%;
     background-color: #fff;
-    font-size: 16px;
     clip-path: polygon(0 0, 96% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%);
+
+    @media(max-width: 1040px) {
+      margin-top: 5%;
+    }
+
+    @media(max-width: 950px) {
+      padding: 20px 30px 22px 20px;
+      margin-top: 0;
+      flex-basis: 50%;
+    }
   }
 
   &__text {
     margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media(max-width: 1040px) {
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &__title {
     margin-bottom: 20px;
     font-size: 1.5em;
-    transition: color 0.25s;
+    transition: color 0.25s;    
+
+    @media(max-width: 1040px) {
+      margin-bottom: 13px;
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -729,8 +767,12 @@ h2 {
 
   &__title {
     margin-bottom: 22px;
-    font-size: 1.5em;
+    font-size: 24px;
     transition: color 0.25s;
+
+    @media(max-width: 1024px) {
+      font-size: 20px;
+    }
   }
 
 }
