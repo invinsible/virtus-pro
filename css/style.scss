@@ -1433,6 +1433,81 @@ h2 {
   }
 }
 
+.player-detail {
+  padding: 24px 30px 0 18px;
+  margin-bottom: 40px;
+  display: flex;
+  background-color: #F8F8F8;
+  font-size: 18px;
+
+  &__img {
+    width: 24%;
+  }
+
+  &__info {
+    padding: 0 0 30px 30px;
+    width: 76%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nickname {
+    font-size: 2.66em;
+    color: #1F2326;
+  }
+
+  &__line {
+    margin-bottom: 15px;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 15px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      transition: border-color 0.25s;
+
+      &:hover {
+        border-color: black;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__config {    
+    padding: 6px 16px 6px 35px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #1F2326;
+    background-image: url('/img/config-ico.png');
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    text-transform: uppercase;
+    transition: background-color 0.25s;
+
+    &:hover {
+      background-color: #FC5000;
+    }
+  }
+}
+
 .team-list {
 
   &__item.col {
@@ -1467,6 +1542,7 @@ h2 {
 
   &__img {
     margin-bottom: 10px;
+
     @media(max-width: 1100px) {
       max-width: 40px;
     }

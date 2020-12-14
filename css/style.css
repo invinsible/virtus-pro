@@ -1689,6 +1689,100 @@ h2 {
   display: block;
 }
 
+.player-detail {
+  padding: 24px 30px 0 18px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  font-size: 18px;
+}
+
+.player-detail__img {
+  width: 24%;
+}
+
+.player-detail__info {
+  padding: 0 0 30px 30px;
+  width: 76%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.player-detail__wrapper {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.player-detail__nickname {
+  font-size: 2.66em;
+  color: #1F2326;
+}
+
+.player-detail__line {
+  margin-bottom: 15px;
+}
+
+.player-detail__line span {
+  font-weight: 500;
+}
+
+.player-detail__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player-detail__social a {
+  margin-right: 15px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-transition: border-color 0.25s;
+  transition: border-color 0.25s;
+}
+
+.player-detail__social a:hover {
+  border-color: black;
+}
+
+.player-detail__social a:last-child {
+  margin-right: 0;
+}
+
+.player-detail__config {
+  padding: 6px 16px 6px 35px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #1F2326;
+  background-image: url("/img/config-ico.png");
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.player-detail__config:hover {
+  background-color: #FC5000;
+}
+
 .team-list__item.col {
   padding: 10px;
   margin-bottom: 0px;
