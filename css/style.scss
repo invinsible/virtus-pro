@@ -1608,6 +1608,61 @@ h2 {
   }
 }
 
+.content {
+  padding: 40px 0;
+  min-height: 560px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+
+  h1 {
+    margin-bottom: 30px;
+    font-size: 1.33em;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 984px;
+  }
+}
+
+.vacancy {
+
+  &__item.col {
+    padding: 10px;
+    clip-path: polygon(0 0, 93% 0, 100% 18%, 100% 100%, 9% 100%, 0 85%);
+  }
+
+  .date {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  &__name {
+    font-size: 24px;
+  }
+
+  &__link {
+    position: relative;
+    padding: 23px 20px 20px 23px;
+    min-height: 168px;
+    display: block;
+    background-color: #fff;
+    color: #1F1F1F;
+    transition: box-shadow 0.25s;
+
+    &:hover {
+      box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
 .partners {
   margin-bottom: 40px;
   display: flex;
