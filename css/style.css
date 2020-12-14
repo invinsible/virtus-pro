@@ -183,7 +183,7 @@ h2 {
 }
 
 .date {
-  font-size: 1.15em;
+  font-size: 18px;
   color: #888888;
 }
 
@@ -978,7 +978,6 @@ h2 {
 }
 
 .main-matches-item .post-meta .date {
-  font-size: 18px;
   font-weight: 500;
   color: #1F2326;
 }
@@ -1926,7 +1925,7 @@ h2 {
   font-weight: 600;
 }
 
-.content p {
+.content p:not([class]) {
   margin-bottom: 20px;
 }
 
@@ -1939,6 +1938,15 @@ h2 {
 
 .content a:not([class]):hover {
   border-color: transparent;
+}
+
+.content__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 550px) {

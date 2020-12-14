@@ -167,7 +167,7 @@ h2 {
 }
 
 .date {
-  font-size: 1.15em;
+  font-size: 18px;
   color: #888888;
 }
 
@@ -830,8 +830,7 @@ h2 {
   .post-meta {
     padding: 10px 20px;
 
-    .date {
-      font-size: 18px;
+    .date {     
       font-weight: 500;
       color: #1F2326;
     }    
@@ -1631,11 +1630,13 @@ h2 {
     font-weight: 600;
   }
 
-  p {
+  p:not([class]) {
     margin-bottom: 20px;
   }
-
   
+  ul:not([class]) {
+
+  }
 
   a:not([class]) {
     color: #fff;
@@ -1645,6 +1646,11 @@ h2 {
     &:hover {
       border-color: transparent;
     }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
   }
 
   @media(max-width: 550px) {
