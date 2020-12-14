@@ -1904,10 +1904,14 @@ h2 {
 
 .content {
   padding: 40px 0;
-  min-height: 560px;
+  min-height: 650px;
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
+}
+
+.content .container {
+  max-width: 984px;
 }
 
 .content h1 {
@@ -1915,12 +1919,32 @@ h2 {
   font-size: 1.33em;
 }
 
+.content h2, .content h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 .content p {
   margin-bottom: 20px;
 }
 
-.content .container {
-  max-width: 984px;
+.content a:not([class]) {
+  color: #fff;
+  border-bottom: 1px solid;
+  -webkit-transition: border-color 0.25s;
+  transition: border-color 0.25s;
+}
+
+.content a:not([class]):hover {
+  border-color: transparent;
+}
+
+@media (max-width: 550px) {
+  .content {
+    font-size: 14px;
+  }
 }
 
 .vacancy__item.col {
