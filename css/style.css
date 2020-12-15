@@ -2130,6 +2130,13 @@ h2 {
   width: 25%;
 }
 
+@media (max-width: 800px) {
+  .social__item {
+    margin: 0 10px 25px;
+    width: auto;
+  }
+}
+
 .social__link {
   margin: 0 auto;
   max-width: 187px;
@@ -2184,6 +2191,13 @@ h2 {
 .social__link:hover {
   -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 800px) {
+  .social__link {
+    max-width: 36px;
+    font-size: 0;
+  }
 }
 
 .footer {

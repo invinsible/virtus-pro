@@ -1803,6 +1803,11 @@ h2 {
   &__item {
     margin-bottom: 60px;
     width: 25%;
+
+    @media(max-width: 800px) {
+      margin: 0 10px 25px;
+      width: auto;
+    }
   }
 
   &__link {
@@ -1850,6 +1855,11 @@ h2 {
 
     &:hover {
       box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @media(max-width: 800px) {
+      max-width: 36px;
+      font-size: 0;
     }
   }
 }
