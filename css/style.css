@@ -121,6 +121,12 @@ h2 {
   }
 }
 
+@media (max-width: 450px) {
+  .container {
+    padding: 0 7px;
+  }
+}
+
 .burger, .burger::after, .burger::before {
   position: absolute;
   left: 0;
@@ -847,12 +853,22 @@ h2 {
   }
 }
 
+@media (max-width: 750px) {
+  .big-news__link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .big-news__img {
   position: relative;
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
           clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
+  z-index: 5;
 }
 
 @media (max-width: 950px) {
@@ -887,6 +903,13 @@ h2 {
   }
 }
 
+@media (max-width: 750px) {
+  .big-news__description {
+    padding-top: 40px;
+    margin-top: -20px;
+  }
+}
+
 .big-news__text {
   margin-bottom: 50px;
   font-size: 16px;
@@ -916,6 +939,18 @@ h2 {
   .big-news__title {
     margin-bottom: 13px;
     font-size: 1.2em;
+  }
+}
+
+@media (max-width: 750px) {
+  .big-news {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .big-news {
+    padding-top: 0px;
   }
 }
 
@@ -958,12 +993,18 @@ h2 {
 
 .news-list__description {
   padding: 123px 30px 22px 22px;
-  margin-left: auto;
+  margin-left: 20px;
   margin-top: -100px;
   max-width: 400px;
   background-color: #fff;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
           clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
+}
+
+@media (max-width: 750px) {
+  .news-list__description {
+    margin-left: 10px;
+  }
 }
 
 .news-list__title {
@@ -1629,6 +1670,12 @@ h2 {
   text-transform: uppercase;
 }
 
+@media (max-width: 450px) {
+  .inner-up h1 {
+    margin-left: 0;
+  }
+}
+
 .inner-up__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1642,10 +1689,34 @@ h2 {
   max-width: 60px;
 }
 
+@media (max-width: 450px) {
+  .inner-up__title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .inner-up__text {
   margin-top: 22px;
   max-width: 600px;
   line-height: 28px;
+}
+
+@media (max-width: 768px) {
+  .inner-up {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .inner-up {
+    padding: 22px 15px;
+  }
 }
 
 .players__link {
