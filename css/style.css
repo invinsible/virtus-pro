@@ -1026,10 +1026,18 @@ h2 {
 }
 
 .main-matches-item__score {
+  position: relative;
   margin: 0 20px;
   min-width: 47px;
   font-size: 1.33em;
   font-weight: 700;
+  text-align: center;
+}
+
+.main-matches-item__score .live-label {
+  position: absolute;
+  left: -5px;
+  z-index: 5;
 }
 
 .shop-carousel__item {
@@ -1143,12 +1151,25 @@ h2 {
   margin-right: 20px;
 }
 
+.live-label {
+  padding: 1px 9px;
+  margin-top: 12px;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #FC5000;
+  border-radius: 20px;
+}
+
 .matches {
   margin-bottom: 70px;
 }
 
 .matches__item {
   margin-bottom: 20px;
+  -webkit-clip-path: polygon(0 0, 99% 0, 100% 10%, 100% 100%, 1% 100%, 0 90%);
+          clip-path: polygon(0 0, 99% 0, 100% 10%, 100% 100%, 1% 100%, 0 90%);
 }
 
 .matches__item:last-child {
@@ -1208,11 +1229,18 @@ h2 {
 }
 
 .matches__versus .score {
+  position: relative;
   margin: 0 30px;
   width: 37px;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+}
+
+.matches__versus .score .live-label {
+  position: absolute;
+  lefT: -10px;
+  margin-top: 3px;
 }
 
 .matches__versus .matches__team:nth-of-type(1) .team-name {
@@ -1301,6 +1329,8 @@ h2 {
   background-color: transparent;
   outline: 0;
   cursor: pointer;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
 }
 
 .pagination__nav.left {
@@ -1309,10 +1339,18 @@ h2 {
   border-color: transparent #fff transparent transparent;
 }
 
+.pagination__nav.left:hover {
+  border-color: transparent #FC5000 transparent transparent;
+}
+
 .pagination__nav.right {
   margin-left: 20px;
   border-width: 9px 0 9px 15.6px;
   border-color: transparent transparent transparent #fff;
+}
+
+.pagination__nav.right:hover {
+  border-color: transparent transparent transparent #FC5000;
 }
 
 .pagination__list {
@@ -1346,7 +1384,7 @@ h2 {
 }
 
 .pagination__link:hover {
-  background-color: #757575;
+  background-color: #FE5000;
 }
 
 .match-detail {
@@ -1941,18 +1979,55 @@ h2 {
 }
 
 .content__bottom {
+  margin: 40px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.content__bottom .date {
+  margin-left: 25px;
+  color: #fff;
+  font-weight: 600;
 }
 
 @media (max-width: 550px) {
   .content {
     font-size: 14px;
   }
+}
+
+.share {
+  position: relative;
+  padding: 5px 18px;
+  background-color: #fff;
+  line-height: 0;
+  outline: 0;
+  bordeR: 0;
+  cursor: pointer;
+  -webkit-clip-path: polygon(0 0, 80% 0, 100% 45%, 100% 100%, 21% 100%, 0 57%);
+          clip-path: polygon(0 0, 80% 0, 100% 45%, 100% 100%, 21% 100%, 0 57%);
+  -webkit-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+
+.share svg > path {
+  -webkit-transition: fill 0.25s;
+  transition: fill 0.25s;
+}
+
+.share:hover, .share.active {
+  background-color: #FC5000;
+}
+
+.share:hover svg > path, .share.active svg > path {
+  fill: #fff;
 }
 
 .vacancy__item.col {
@@ -2067,18 +2142,48 @@ h2 {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  background-color: rgba(59, 89, 152, 0.6);
   border-radius: 50px;
+  -webkit-transition: -webkit-box-shadow 0.25s;
+  transition: -webkit-box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
 }
 
-.social__link::before {
-  content: '';
+.social__link img {
   margin-right: 18px;
-  display: block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #3B5998;
+}
+
+.social__link--fb {
+  background-color: rgba(59, 89, 152, 0.6);
+}
+
+.social__link--vk {
+  background-color: rgba(76, 108, 145, 0.6);
+}
+
+.social__link--youtube {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.social__link--in {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.social__link--tw {
+  background-color: rgba(85, 172, 238, 0.6);
+}
+
+.social__link--tg {
+  background-color: rgba(40, 159, 210, 0.5);
+}
+
+.social__link--tt {
+  background-color: rgba(22, 23, 34, 0.5);
+}
+
+.social__link:hover {
+  -webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
 }
 
 .footer {
