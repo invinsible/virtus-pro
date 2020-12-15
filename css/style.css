@@ -2168,7 +2168,7 @@ h2 {
   font-size: 1.33em;
 }
 
-.content h2, .content h3 {
+.content h2:not([class]), .content h3:not([class]) {
   margin-top: 40px;
   margin-bottom: 15px;
   font-size: 1em;

@@ -1801,7 +1801,7 @@ h2 {
     font-size: 1.33em;
   }
 
-  h2, h3 {
+  h2:not([class]), h3:not([class]) {
     margin-top: 40px;
     margin-bottom: 15px;
     font-size: 1em;
