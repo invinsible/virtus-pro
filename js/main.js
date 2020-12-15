@@ -50,12 +50,39 @@ const tab = function() {
 
 tab();
 
+// Partners counter in footer
 const partnersItems = document.querySelectorAll('.partners__item');
-
 if(partnersItems.length >= 5) { 
 
   for (let i = 0; i < 3; i++) {
     partnersItems[i].classList.add('partners__item--big')
   }
-
 }
+
+//Filter posts
+const filterPost = function () {
+  const filterBtn = document.querySelectorAll('.filterBtn');
+  const filterForm = document.querySelectorAll('.filterForm');
+
+  filterBtn.forEach(item => { 
+    item.addEventListener('click', filterHandler);
+  })
+
+  filterForm.forEach(item => {
+    item.addEventListener('input', postCountHandler);
+    item.addEventListener('reset', function(){
+      this.previousElementSibling.querySelector('.filter-count').classList.remove('show');
+    })
+  })
+
+  function filterHandler(e) {
+    e.preventDefault();    
+    this.nextElementSibling.classList.toggle('show');
+  }
+
+  function postCountHandler() {
+    this.previousElementSibling.querySelector('.filter-count').classList.add('show');    
+  }
+};
+
+filterPost();

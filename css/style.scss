@@ -136,9 +136,28 @@ h2 {
   position: relative;
   display: block;
   z-index: 40;
+  overflow: hidden;
 
   &--center {
     margin-bottom: 40px;
+
+    img {
+      margin: 0 auto;
+      
+      @media(max-width: 800px) {
+        max-width: none;
+        transform: translateX(-22%);
+      }
+
+      @media(max-width: 550px) {
+        max-width: none;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
   }
 }
 
@@ -177,6 +196,7 @@ h2 {
 
   &__btn {
     padding: 4px 17px;
+    min-height: 36px;
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -204,9 +224,18 @@ h2 {
 
   .filter-count {
     padding: 3px;
+    display: none;
     margin-left: 10px;
     color: #fff;
     background-color: #FC5000;
+
+    i {
+      font-style: normal;
+    }
+  }
+
+  .show {
+    display: block;
   }
 
   &__form {
@@ -218,11 +247,9 @@ h2 {
     width: 270px;
     display: none;
     background-color: #fff;
+    text-align: center;
     z-index: 3;
-
-    &.active {
-      display: block;
-    }
+    clip-path: polygon(0 0, 96% 0, 100% 4%, 100% 100%, 5% 100%, 0 96%);    
   }
 
   &__option {
