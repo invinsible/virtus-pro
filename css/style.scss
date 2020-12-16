@@ -716,10 +716,34 @@ h2 {
   
 }
 
-.main {
-  padding-top: 40px;
-  padding-bottom: 20px;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
+
+.main {
+  position: relative;
+  padding-top: 40px;  
+  
+}
+
+
+  @media(min-width: 1440px) {
+    .main {
+      background-image: url('/img/main-bg.png');
+      background-repeat: no-repeat;
+    }
+
+    .bg-scroll {
+      padding-top: 120px;
+      background-attachment: fixed;
+      background-position-y: 75px;
+    }    
+  }
+  
+
 
 .big-news {
   padding-top: 30px;
@@ -2101,11 +2125,8 @@ $mr: 20px;
 }
 
 
-.test {
-  padding: 50px 0;
 
-  &__half {
-    margin: 0 auto;
-    max-width: 970px;
-  }
+
+.swiper-wrapper {
+  //box-sizing: border-box;
 }

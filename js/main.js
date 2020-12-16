@@ -86,3 +86,46 @@ const filterPost = function () {
 };
 
 filterPost();
+
+
+// Swiper
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // init: false,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {    
+   
+    450: {
+      slidesPerView: 2,
+      spaceBetween: 20,      
+    },
+
+    769: {
+      slidesPerView: 4,
+      spaceBetween: 20,      
+    },
+  }
+});
+
+
+// Sticky Header
+window.onscroll = function() {stickHeader()};
+const header = document.querySelector(".header__wrapper");
+const main = document.querySelector(".main");
+let sticky = header.offsetTop;
+
+function stickHeader() {
+  if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+      main.classList.add('bg-scroll');
+  } else {
+      header.classList.remove("sticky");
+      main.classList.remove('bg-scroll');
+  }
+}
+
+

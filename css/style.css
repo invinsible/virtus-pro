@@ -834,9 +834,28 @@ h2 {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
 .main {
+  position: relative;
   padding-top: 40px;
-  padding-bottom: 20px;
+}
+
+@media (min-width: 1440px) {
+  .main {
+    background-image: url("/img/main-bg.png");
+    background-repeat: no-repeat;
+  }
+  .bg-scroll {
+    padding-top: 120px;
+    background-attachment: fixed;
+    background-position-y: 75px;
+  }
 }
 
 .big-news {
@@ -2507,14 +2526,5 @@ h2 {
 .col {
   padding: 0 10px;
   margin-bottom: 40px;
-}
-
-.test {
-  padding: 50px 0;
-}
-
-.test__half {
-  margin: 0 auto;
-  max-width: 970px;
 }
 /*# sourceMappingURL=style.css.map */
