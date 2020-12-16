@@ -104,6 +104,10 @@ h2 {
   transition: all 0.25s;
 }
 
+.btn.showMore {
+  margin: 0 auto;
+}
+
 .btn:hover {
   background-color: #FE5000;
   color: #fff;
@@ -1253,7 +1257,7 @@ h2 {
 }
 
 .matches {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .matches__item {

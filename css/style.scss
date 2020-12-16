@@ -97,6 +97,10 @@ h2 {
   cursor: pointer;
   transition: all 0.25s;
 
+  &.showMore {
+    margin: 0 auto;
+  }
+
   &:hover {
     background-color: #FE5000;
     color: #fff;
@@ -1062,7 +1066,7 @@ h2 {
 }
 
 .matches {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 
   &__item {
     margin-bottom: 20px;
