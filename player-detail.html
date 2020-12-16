@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Player detail</title>
+</head>
+<body>
+  <header class="header">
+    <a class="promo promo--header" ref="#">
+      <img src="/img/promo-header.jpg" alt="">
+    </a>
+
+    <div class="header__wrapper">      
+      <nav class="main-nav">
+        <a class="logo logo--header" href="#">
+          <img src="/img/logo.png" alt="Логотип Virtus Pro">
+        </a>
+
+        <div class="search-wrapper">
+          <button class="menu-mobile" aria-label="Мобильное меню"><span class="burger"></span></button>
+          <ul class="menu">
+            <li class="menu__item active">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Составы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Матч-центр</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Награды</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Магазин</a>
+            </li>
+            <li class="menu__item has-sub">
+              <a class="menu__link" href="#">О клубе</a>
+              <ul class="menu-sub">
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">О нас</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Команда</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Вакансии</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Партнерам</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Сми</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Партнеры</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Фан центр</a>
+            </li>
+          </ul>
+
+          <form class="search" action="#">
+            <div class="search__item">
+              <input class="search__input" type="text" placeholder="Введите поисковой запрос">
+            </div>            
+            <button class="search__btn searchBtn" type="submit" aria-label="Найти"></button>
+          </form>
+        </div>        
+      </nav>
+      
+      
+      <div class="header__right">
+        <a class="user-lk" href="#">user</a>
+         
+        <div class="switch-lang">
+          <button class="switch-lang__btn" type="button" aria-label="Сменить язык">Eng</button>
+          <ul class="switch-lang__list menu-sub"> 
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Eng</a>
+            </li>
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Rus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+    </div>    
+  </header>
+  <main class="main">    
+    <div class="container">
+      <div class="player-detail">
+        <div class="player-detail__img">
+          <img src="/img/player-detail.png" alt="">
+        </div>
+        <div class="player-detail__info">
+          <div class="player-detail__description">
+            <h1 class="player-detail__nickname">buster</h1>
+            <p class="player-detail__line"><span>Имя: </span>Тимур Тулепов</p>
+            <p class="player-detail__line"><span>Дата рождения: </span>17.12.1999 (20 лет)</p>
+            <p class="player-detail__line"><span>Страна: </span>Казахстан, Павлодар</p>
+          </div>
+          <div class="player-detail__wrapper">
+            <div class="player-detail__social">
+              <a href="#"><img src="/img/player-tw.png" alt=""></a>
+              <a href="#"><img src="/img/player-inst.png" alt=""></a>
+            </div>
+            <a class="player-detail__config" href="#" target="_blank">Скачать конфиг</a>
+          </div>            
+        </div>
+      </div>
+
+      <div class="tabs">
+        <nav class="tabs-nav">
+          <button class="tabs-nav__btn tabBtn active" data-tab-name="tab4" type="button">Биография</button>
+          <button class="tabs-nav__btn tabBtn" data-tab-name="tab5" type="button">Оборудование</button>
+          <button class="tabs-nav__btn tabBtn" data-tab-name="tab6" type="button">Новости</button>
+        </nav>          
+        <div class="tabs__content tabContent active tab4">
+          <ul class="matches">
+            <li class="matches__item">
+              <a class="matches__link" href="#">
+                <div class="post-meta">
+                  <div class="label">Cs:GO</div>
+                  <p class="date">04.09.20</p>
+                </div>
+                <div class="matches__versus">
+                  <div class="matches__team">
+                    <p class="team-name">Virtus.Pro</p>
+                    <img class="team-logo" src="/img/match-item1.png" alt="">
+                  </div>
+                  <p class="score">
+                    <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                  </p>
+                  <div class="matches__team">
+                    <p class="team-name">Gambit Youngsterss</p>
+                    <img class="team-logo" src="/img/match-item2.png" alt="">
+                  </div>
+                </div>
+                <div class="matches__info">
+                  <p class="tournament">The International 2020</p>
+                  <p class="stage">ПЛЕЙ-ОФФ</p>
+                </div>
+              </a>
+            </li>
+  
+            <li class="matches__item">
+              <a class="matches__link" href="#">
+                <div class="post-meta">
+                  <div class="label">Cs:GO</div>
+                  <p class="date">04.09.20</p>
+                </div>
+                <div class="matches__versus">
+                  <div class="matches__team">
+                    <p class="team-name">Virtus.Pro</p>
+                    <img class="team-logo" src="/img/match-item1.png" alt="">
+                  </div>
+                  <p class="score">
+                    <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                  </p>
+                  <div class="matches__team">
+                    <p class="team-name">Gambit Youngsterss</p>
+                    <img class="team-logo" src="/img/match-item2.png" alt="">
+                  </div>
+                </div>
+                <div class="matches__info">
+                  <p class="tournament">The International 2020</p>
+                  <p class="stage">ПЛЕЙ-ОФФ</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__content tabContent tab5">
+          <ul class="awards">
+            <li class="awards__item awards__item--first">
+              <div class="awards__logo">Состав</div>
+              <div class="awards__game">Дисциплина</div>
+              <p class="awards__rate sort active">Место</p>
+              <p class="awards__tournament">Турнир</p>
+              <p class="awards__place">Место проведения</p>
+              <p class="awards__date sort">Дата</p>
+              <p class="awards__money sort">Призовые</p>
+            </li>
+            
+            
+            <li class="awards__item">
+              <div class="awards__logo"> <img src="/img/match-item1.png" alt=""> </div>
+              <div class="awards__game"> <div class="label">R6</div> </div>
+              <p class="awards__rate"><b>00</b> <span>место</span></p>
+              <p class="awards__tournament"> Название турнира </p>
+              <p class="awards__place">Место проведения</p>
+              <p class="awards__date">00.00.00 — 00.00.00</p>
+              <p class="awards__money">$000000000000</p>
+            </li>
+  
+  
+            <li class="awards__item">
+              <div class="awards__logo"> <img src="/img/match-item2.png" alt=""> </div>
+              <div class="awards__game"> <div class="label">Fortnite</div> </div>
+              <p class="awards__rate"><b>00-00</b> <span>место</span></p>
+              <p class="awards__tournament">ESL One Birmingham 2018</p>
+              <p class="awards__place">Бирмингем, Великобритания</p>
+              <p class="awards__date">00.00.00 — 00.00.00</p>
+              <p class="awards__money">$0000</p>
+            </li>
+  
+            <li class="awards__item">
+              <div class="awards__logo"> <img src="/img/match-item1.png" alt=""> </div>
+              <div class="awards__game"> <div class="label">Heartstone</div> </div>
+              <p class="awards__rate"><b>5</b> <span>место</span></p>
+              <p class="awards__tournament">Турнир</p>
+              <p class="awards__place">россия</p>
+              <p class="awards__date">00.00.00 — 00.00.00</p>
+              <p class="awards__money">—</p>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__content tabContent tab6">
+          <div class="news-list row row--3">
+            <article class="news-list__item col">
+              <a class="news-list__link" href="#">
+                <div class="news-list__img">
+                  <img src="/img/news.jpg" alt="">
+                </div>
+                <div class="news-list__description">
+                  <h3 class="news-list__title">VP.Prodigy получает инвайт на OGA Dota PIT Season 3 Europe CIS</h3>
+                  <div class="post-meta">
+                    <div class="label">Dota2</div>                  
+                    <p class="date">16.09.2020</p>
+                  </div>
+                </div>                
+              </a>
+            </article>
+            <article class="news-list__item col">
+              <a class="news-list__link" href="#">
+                <div class="news-list__img">
+                  <img src="/img/news.jpg" alt="">
+                </div>
+                <div class="news-list__description">
+                  <h3 class="news-list__title">Virtus.pro сыграет на European League - Season 1 - Stage 2</h3>
+                  <div class="post-meta">
+                    <div class="label">R6</div>
+                    <p class="date">16.09.2020</p>
+                  </div>
+                </div>                
+              </a>
+            </article>
+            <article class="news-list__item col">
+              <a class="news-list__link" href="#">
+                <div class="news-list__img">
+                  <img src="/img/news.jpg" alt="">
+                </div>
+                <div class="news-list__description">
+                  <h3 class="news-list__title">Virtus.pro сыграет на European League - Season 1 - Stage 2</h3>
+                  <div class="post-meta">
+                    <div class="label">R6</div>
+                    <p class="date">16.09.2020</p>
+                  </div>
+                </div>                
+              </a>
+            </article>
+            <article class="news-list__item col">
+              <a class="news-list__link" href="#">
+                <div class="news-list__img">
+                  <img src="/img/news.jpg" alt="">
+                </div>
+                <div class="news-list__description">
+                  <h3 class="news-list__title">Virtus.pro сыграет на European League - Season 1 - Stage 2</h3>
+                  <div class="post-meta">
+                    <div class="label">Apex Legends</div>
+                    <p class="date">16.09.2020</p>
+                  </div>
+                </div>                
+              </a>
+            </article>
+          </div>
+        </div>          
+      </div>      
+      
+    </div>
+    <div class="promo promo--center">
+      <a class="promo__link" href="#" target="_blank" rel="nofollow" >
+        <img src="/img/promo-main.jpg" alt="">
+      </a>      
+    </div>
+
+  </main>
+  <footer class="footer">
+    <div class="container">    
+      <ul class="partners">
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner1.png" alt="Pari Match logo">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner2.png " alt="HyperX logo">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner3.png" alt="Haval logo">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner4.png" alt="Fragstore logo">
+          </a>
+        </li>
+
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner4.png" alt="Fragstore logo">
+          </a>
+        </li>
+
+        
+      </ul>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#" target="_blank"> <img src="/img/fb-icon.png" alt="Virtus Pro в Facebook"> 15 648 946</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" target="_blank"> <img src="/img/vk-icon.png" alt="Virtus Pro в Vkontakte"> 15 648 946</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#" target="_blank"> <img src="/img/youtube-icon.png" alt="Virtus Pro в Youtube"> 15 648 946</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--in" href="#" target="_blank" > <img src="/img/inst-icon.png" alt="Virtus Pro в Instagramm"> 15 648 946</a>
+        </li>  
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="#" target="_blank"> <img src="/img/tw-icon.png" alt="Virtus Pro в Twitter"> 15 648 946</a>
+        </li> 
+        <li class="social__item">
+          <a class="social__link social__link--tg" href="#" target="_blank"> <img src="/img/tg-icon.png" alt="Virtus Pro в Telegramm"> 15 648 946</a>
+        </li>  
+        <li class="social__item">
+          <a class="social__link social__link--tt" href="#" target="_blank"> <img src="/img/tt-icon.png" alt="Virtus Pro в TikTok"> 15 648 946</a>
+        </li>         
+      </ul>
+    </div>
+    <p class="footer__text"><a class="footer__link" target="_blank" href="#">Правила обработки персональных данных</a> и <a class="footer__link" target="_blank" href="#">политика конфиденциальности сайта virtus.pro</a></p>
+    <p class="footer__copyright">© 2003 — 2020 VIRTUS.PRO При копировании материалов активная ссылка на сайт обязательна</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

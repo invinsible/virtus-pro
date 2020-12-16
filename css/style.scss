@@ -108,6 +108,10 @@ h2 {
   margin: 0 auto;
   max-width: 1320px;
 
+  &--small {    
+    max-width: 984px;    
+  }
+
   @media(max-width: 1024px) {
     padding: 0 23px;
   }
@@ -708,8 +712,13 @@ h2 {
   
 }
 
+.main {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 .big-news {
-  padding-top: 70px;
+  padding-top: 30px;
   margin-bottom: 40px;
 
   .post-meta {
@@ -804,12 +813,8 @@ h2 {
   }
 
   @media(max-width: 750px) {
-    padding-top: 20px;
-  }
-
-  @media(max-width: 450px) {
     padding-top: 0px;
-  }
+  }  
 }
 
 .orange {
@@ -1004,7 +1009,7 @@ h2 {
 }
 
 .main-fan {
-  padding: 112px 0 100px;
+  padding: 112px 0 70px;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
@@ -1101,15 +1106,15 @@ h2 {
 
     .score {
       position: relative;
-      margin:0 30px;
-      width: 37px;
+      margin:0 25px;
+      width: 70px;
       font-size: 18px;
       font-weight: 700;
       text-align: center;
 
       .live-label {
         position: absolute;
-        lefT: -10px;
+        left: 10px;
         margin-top: 3px;
       }
     }
@@ -1167,6 +1172,7 @@ h2 {
 
 
 .pagination {
+  margin-bottom: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1686,6 +1692,7 @@ h2 {
 }
 
 .team-list {
+  margin-bottom: 80px;
 
   &__item.col {
     padding: 10px;
@@ -1790,11 +1797,7 @@ h2 {
   min-height: 650px;
   font-size: 18px;
   line-height: 24px;
-  color: #FFFFFF;
-
-  .container {
-    max-width: 984px;
-  }
+  color: #FFFFFF;  
 
   h1 {
     margin-bottom: 30px;
@@ -2008,6 +2011,7 @@ h2 {
 
 .footer {
   padding-bottom: 60px;
+  padding-top: 40px;
   font-size: 16px;
   color: #888888;
 

@@ -115,6 +115,10 @@ h2 {
   max-width: 1320px;
 }
 
+.container--small {
+  max-width: 984px;
+}
+
 @media (max-width: 1024px) {
   .container {
     padding: 0 23px;
@@ -826,8 +830,13 @@ h2 {
   }
 }
 
+.main {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
 .big-news {
-  padding-top: 70px;
+  padding-top: 30px;
   margin-bottom: 40px;
 }
 
@@ -955,12 +964,6 @@ h2 {
 }
 
 @media (max-width: 750px) {
-  .big-news {
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 450px) {
   .big-news {
     padding-top: 0px;
   }
@@ -1191,7 +1194,7 @@ h2 {
 }
 
 .main-fan {
-  padding: 112px 0 100px;
+  padding: 112px 0 70px;
   color: #fff;
   font-size: 24px;
   font-weight: 700;
@@ -1317,8 +1320,8 @@ h2 {
 
 .matches__versus .score {
   position: relative;
-  margin: 0 30px;
-  width: 37px;
+  margin: 0 25px;
+  width: 70px;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
@@ -1326,7 +1329,7 @@ h2 {
 
 .matches__versus .score .live-label {
   position: absolute;
-  lefT: -10px;
+  left: 10px;
   margin-top: 3px;
 }
 
@@ -1399,6 +1402,7 @@ h2 {
 }
 
 .pagination {
+  margin-bottom: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2032,6 +2036,10 @@ h2 {
   background-color: #FC5000;
 }
 
+.team-list {
+  margin-bottom: 80px;
+}
+
 .team-list__item.col {
   padding: 10px;
   margin-bottom: 0px;
@@ -2157,10 +2165,6 @@ h2 {
   font-size: 18px;
   line-height: 24px;
   color: #FFFFFF;
-}
-
-.content .container {
-  max-width: 984px;
 }
 
 .content h1 {
@@ -2414,6 +2418,7 @@ h2 {
 
 .footer {
   padding-bottom: 60px;
+  padding-top: 40px;
   font-size: 16px;
   color: #888888;
 }

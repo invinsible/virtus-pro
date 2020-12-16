@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Match detail</title>
+</head>
+<body>
+  <header class="header">
+    <a class="promo promo--header" ref="#">
+      <img src="/img/promo-header.jpg" alt="">
+    </a>
+
+    <div class="header__wrapper">      
+      <nav class="main-nav">
+        <a class="logo logo--header" href="#">
+          <img src="/img/logo.png" alt="Логотип Virtus Pro">
+        </a>
+
+        <div class="search-wrapper">
+          <button class="menu-mobile" aria-label="Мобильное меню"><span class="burger"></span></button>
+          <ul class="menu">
+            <li class="menu__item active">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Составы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Матч-центр</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Награды</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Магазин</a>
+            </li>
+            <li class="menu__item has-sub">
+              <a class="menu__link" href="#">О клубе</a>
+              <ul class="menu-sub">
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">О нас</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Команда</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Вакансии</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Партнерам</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Сми</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Партнеры</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Фан центр</a>
+            </li>
+          </ul>
+
+          <form class="search" action="#">
+            <div class="search__item">
+              <input class="search__input" type="text" placeholder="Введите поисковой запрос">
+            </div>            
+            <button class="search__btn searchBtn" type="submit" aria-label="Найти"></button>
+          </form>
+        </div>        
+      </nav>
+      
+      
+      <div class="header__right">
+        <a class="user-lk" href="#">user</a>
+         
+        <div class="switch-lang">
+          <button class="switch-lang__btn" type="button" aria-label="Сменить язык">Eng</button>
+          <ul class="switch-lang__list menu-sub"> 
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Eng</a>
+            </li>
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Rus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+    </div>    
+  </header>
+  <main class="main">    
+    <div class="container container--small">
+      <article class="match-detail">         
+        <div class="label">Cs:GO</div>
+
+        <div class="match-detail__wrapper">
+          <p class="match-detail__title">Gambit Youngsters VS Virtus.pro</p>
+          <p class="match-detail__tournament">Nine to Five #4 | Плей-офф | Полуфинал</p>
+
+          <div class="match-detail__versus">
+            <div class="match-detail__team">
+              <img class="match-detail__team-logo" src="/img/match-item1.png" alt="">
+              <p class="match-detail__team-name">Virtus.pro</p>
+            </div>
+
+            <div class="match-detail__mid">
+              <p class="match-detail__score">1 - 2</p>
+              <p class="match-detail__date">04.09 22:00</p>
+            </div>
+
+            <div class="match-detail__team">
+              <img class="match-detail__team-logo" src="/img/match-item2.png" alt="">
+              <p class="match-detail__team-name">Gambit Young</p>
+            </div>
+          </div>
+
+          <div class="match-detail__players">
+            <ul class="half">
+              <li><b>SANJI</b> Санжар Кулиев</li>
+              <li><b>Qikert</b> Алексей Голубев</li>
+              <li><b>YEKINDAR</b> Марэк Галинскис</li>
+              <li><b>Jame Джами ХаджиАли</b> Длинныйник такой длинннный что не помещается</li>
+              <li><b>Buster</b> Тимур Тулепов</li>
+            </ul>
+            <ul class="half">                
+              <li><b>HObbit</b> Абай Хасенов</li>
+              <li><b>Ax1Le</b> Сергей Рыхторов</li>
+              <li><b>interz</b> Тимофей Якушин</li>
+              <li><b>sh1ro</b> Дмитрий Соколов</li>
+              <li><b>nafany</b> Владислав Горшков</li>
+            </ul>
+          </div>
+        </div>
+
+      </article>
+
+      <h2>Прошедшие матчи</h2>
+      <ul class="matches">
+        <li class="matches__item">
+          <a class="matches__link" href="#">
+            <div class="post-meta">
+              <div class="label">Cs:GO</div>
+              <p class="date">04.09.20</p>
+            </div>
+            <div class="matches__versus">
+              <div class="matches__team">
+                <p class="team-name">Virtus.Pro</p>
+                <img class="team-logo" src="/img/match-item1.png" alt="">
+              </div>
+              <p class="score">
+                <span class="firstScore">1</span> - <span class="secondScore">0</span>
+                <span class="live-label">Live</span>
+              </p>
+              <div class="matches__team">
+                <p class="team-name">Gambit Youngsterss</p>
+                <img class="team-logo" src="/img/match-item2.png" alt="">
+              </div>
+            </div>
+            <div class="matches__info">
+              <p class="tournament">The International 2020</p>
+              <p class="stage">ПЛЕЙ-ОФФ</p>
+            </div>
+          </a>
+        </li>
+
+        <li class="matches__item">
+          <a class="matches__link" href="#">
+            <div class="post-meta">
+              <div class="label">Cs:GO</div>
+              <p class="date">04.09.20</p>
+            </div>
+            <div class="matches__versus">
+              <div class="matches__team">
+                <p class="team-name">Virtus.Pro</p>
+                <img class="team-logo" src="/img/match-item1.png" alt="">
+              </div>
+              <p class="score">
+                <span class="firstScore">1</span> - <span class="secondScore">0</span>
+              </p>
+              <div class="matches__team">
+                <p class="team-name">Gambit Youngsterss</p>
+                <img class="team-logo" src="/img/match-item2.png" alt="">
+              </div>
+            </div>
+            <div class="matches__info">
+              <p class="tournament">The International 2020</p>
+              <p class="stage">ПЛЕЙ-ОФФ</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>    
+  </main>
+  <footer class="footer">
+    <div class="container">    
+      <ul class="partners">
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner1.png" alt="Pari Match logo">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner2.png " alt="HyperX logo">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner3.png" alt="Haval logo">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner4.png" alt="Fragstore logo">
+          </a>
+        </li>
+
+        <li class="partners__item">
+          <a class="partners__link" href="#" target="_blank" rel="nofollow">
+            <img src="/img/partner4.png" alt="Fragstore logo">
+          </a>
+        </li>
+
+        
+      </ul>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="#" target="_blank"> <img src="/img/fb-icon.png" alt="Virtus Pro в Facebook"> 15 648 946</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vk" href="#" target="_blank"> <img src="/img/vk-icon.png" alt="Virtus Pro в Vkontakte"> 15 648 946</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#" target="_blank"> <img src="/img/youtube-icon.png" alt="Virtus Pro в Youtube"> 15 648 946</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--in" href="#" target="_blank" > <img src="/img/inst-icon.png" alt="Virtus Pro в Instagramm"> 15 648 946</a>
+        </li>  
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="#" target="_blank"> <img src="/img/tw-icon.png" alt="Virtus Pro в Twitter"> 15 648 946</a>
+        </li> 
+        <li class="social__item">
+          <a class="social__link social__link--tg" href="#" target="_blank"> <img src="/img/tg-icon.png" alt="Virtus Pro в Telegramm"> 15 648 946</a>
+        </li>  
+        <li class="social__item">
+          <a class="social__link social__link--tt" href="#" target="_blank"> <img src="/img/tt-icon.png" alt="Virtus Pro в TikTok"> 15 648 946</a>
+        </li>         
+      </ul>
+    </div>
+    <p class="footer__text"><a class="footer__link" target="_blank" href="#">Правила обработки персональных данных</a> и <a class="footer__link" target="_blank" href="#">политика конфиденциальности сайта virtus.pro</a></p>
+    <p class="footer__copyright">© 2003 — 2020 VIRTUS.PRO При копировании материалов активная ссылка на сайт обязательна</p>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
