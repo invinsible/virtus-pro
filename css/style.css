@@ -2009,6 +2009,7 @@ h2 {
 
 .player-detail__social a {
   margin-right: 15px;
+  width: 30px;
   border: 2px solid transparent;
   border-radius: 50%;
   -webkit-transition: border-color 0.25s;
