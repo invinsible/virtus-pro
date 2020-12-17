@@ -2056,17 +2056,25 @@ h2 {
     line-height: 28px;
   }
 
-  @media(max-width: 768px) {    
+  @media(max-width: 1024px) {    
     font-size: 14px;
   }
 
   @media(max-width: 450px) {
     padding: 22px 15px;
+    clip-path: polygon(0 0, 97% 0, 100% 6%, 100% 100%, 4% 100%, 0 95%);
   }
 }
 
-.players {
+.players { 
 
+  &.row {
+    @media(max-width: 550px) {
+      width: auto;
+      flex-wrap: nowrap;
+      overflow: scroll;
+    }
+  }
   
 
   &__link {
@@ -2079,18 +2087,30 @@ h2 {
     &:hover > .players__img{
       box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.4);
     }
+
+    @media(max-width: 1024px) {
+      font-size: 14px;
+    }
   }
 
   &__role {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media(max-width: 1024px) {
+      margin-bottom: 4px;
+    }
   }
 
   &__name {
     margin-bottom: 15px;
     font-size: 1.33em;
     font-weight: 700;
+
+    @media(max-width: 1024px) {
+      font-size: 1.4em;
+    }
   }
 
   &__img {
@@ -2114,7 +2134,12 @@ h2 {
     @media (max-width: 1024px) {
       min-height: 283px;
     }
-  }
+
+    @media(max-width: 550px) { 
+      width: 240px;
+      min-height: auto;
+    }
+  }  
 }
 
 .tabs {
