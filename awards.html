@@ -102,39 +102,52 @@
     <div class="container">
       <h1>Награды</h1>
 
-      <div class="filter-post">
-        <button class="filter-post__btn filterBtn" type="button">
-          Все награды
-          <span class="filter-count">+ <i>1</i></span>          
-        </button>
-        <form class="filter-post__form filterForm" action="#">
-          <div class="filter-post__option">              
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id11">
-            <label class="filter-post__label filter-post__label--text" for="id11">Новости клуба</label>                
+      <div class="sort-wrapper">
+        <div class="filter-post">
+          <button class="filter-post__btn filterBtn" type="button">
+            Все награды
+            <span class="filter-count">+ <i>1</i></span>          
+          </button>
+          <form class="filter-post__form filterForm" action="#">
+            <div class="filter-post__option">              
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id11">
+              <label class="filter-post__label filter-post__label--text" for="id11">Новости клуба</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id21">
+              <label class="filter-post__label" for="id21">Dota 2</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id31">
+              <label class="filter-post__label" for="id31">Cs:Go</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id41">
+              <label class="filter-post__label" for="id41">Fortnite</label>                
+            </div>
+            <div class="filter-post__option">
+              <img src="/img/small_vp.png" alt="">
+              <input class="filter-post__input visually-hidden" type="checkbox" id="id51">
+              <label class="filter-post__label" for="id51">Dota 2</label>                
+            </div>
+            <button class="filter-post__reset" type="reset">Сбросить</button>
+          </form>
+        </div>
+  
+        <div class="sort-up">
+          <button class="sort-up__btn sort-arrow" type="btn" aria-label="Сортировка">За все время</button>
+          <div class="sort-up__list">
+            <a class="sort-up__link" href="#">Сначала новые</a>
+            <a class="sort-up__link" href="#">Сначала дороже</a>
+            <a class="sort-up__link" href="#">Сначала дешевле</a>
           </div>
-          <div class="filter-post__option">
-            <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id21">
-            <label class="filter-post__label" for="id21">Dota 2</label>                
-          </div>
-          <div class="filter-post__option">
-            <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id31">
-            <label class="filter-post__label" for="id31">Cs:Go</label>                
-          </div>
-          <div class="filter-post__option">
-            <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id41">
-            <label class="filter-post__label" for="id41">Fortnite</label>                
-          </div>
-          <div class="filter-post__option">
-            <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id51">
-            <label class="filter-post__label" for="id51">Dota 2</label>                
-          </div>
-          <button class="filter-post__reset" type="reset">Сбросить</button>
-        </form>
+        </div>
       </div>
+
+      
       
       <ul class="awards">
         <li class="awards__item awards__item--first">

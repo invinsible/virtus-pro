@@ -757,6 +757,35 @@ h2 {
   }
 }
 
+.sort-wrapper {
+  position: relative;
+
+  .sort-up {
+    top: 0;
+
+    &__btn {
+      font-size: 14px;
+      text-transform: none;
+    }
+
+    &__list {
+      left: -8px;
+      padding: 10px;
+      margin-top: 8px;
+    }
+
+    &__link {
+      margin-bottom: 7px;
+      font-size: 13px;
+      text-transform: none;
+    }
+
+    @media(max-width: 560px) {
+      display: none;
+    }
+  }
+}
+
 .sort-up {
   position: absolute;
   right: 0;
@@ -1361,7 +1390,7 @@ h2 {
     display: flex;
     font-size: 18px;
     color: #1F1F1F;
-    background-color: #F8F8F8;
+    background-color: #fff;
     clip-path: polygon(0 0, 99% 0, 100% 9%, 100% 100%, 2% 100%, 0 94%);
 
     &:last-child {

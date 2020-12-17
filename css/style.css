@@ -878,6 +878,37 @@ h2 {
   margin-bottom: 0;
 }
 
+.sort-wrapper {
+  position: relative;
+}
+
+.sort-wrapper .sort-up {
+  top: 0;
+}
+
+.sort-wrapper .sort-up__btn {
+  font-size: 14px;
+  text-transform: none;
+}
+
+.sort-wrapper .sort-up__list {
+  left: -8px;
+  padding: 10px;
+  margin-top: 8px;
+}
+
+.sort-wrapper .sort-up__link {
+  margin-bottom: 7px;
+  font-size: 13px;
+  text-transform: none;
+}
+
+@media (max-width: 560px) {
+  .sort-wrapper .sort-up {
+    display: none;
+  }
+}
+
 .sort-up {
   position: absolute;
   right: 0;
@@ -1632,7 +1663,7 @@ h2 {
   display: flex;
   font-size: 18px;
   color: #1F1F1F;
-  background-color: #F8F8F8;
+  background-color: #fff;
   -webkit-clip-path: polygon(0 0, 99% 0, 100% 9%, 100% 100%, 2% 100%, 0 94%);
           clip-path: polygon(0 0, 99% 0, 100% 9%, 100% 100%, 2% 100%, 0 94%);
 }
