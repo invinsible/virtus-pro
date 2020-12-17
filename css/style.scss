@@ -2049,10 +2049,13 @@ h2 {
         background-color: #fff;
       }
 
+      @media(max-width: 1024px) {       
+        font-size: 14px;        
+      }
+
       @media(max-width: 570px) {
         padding: 6px 20px;
-        margin-right: 20px;
-        font-size: 14px;
+        margin-right: 20px;       
 
         &:last-child {
           margin-right: 0;
@@ -2068,6 +2071,10 @@ h2 {
     &.active {
       display: block;
     }
+
+    @media(max-width: 1024px) {       
+      padding: 15px 0;        
+    }
   }
 }
 
@@ -2080,6 +2087,19 @@ h2 {
 
   &__img {
     width: 24%;
+
+    @media(max-width: 990px) {
+      width: auto;
+    }
+
+    @media(max-width: 630px) {  
+      margin-bottom: 15px;
+      border-bottom: 2px solid black;
+
+      img {
+        margin: auto;
+      }
+    }
   }
 
   &__info {
@@ -2094,6 +2114,11 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width: 630px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__nickname {
@@ -2130,6 +2155,10 @@ h2 {
         margin-right: 0;
       }
     }
+
+    @media(max-width: 630px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__config {    
@@ -2156,7 +2185,28 @@ h2 {
 
     p:not([class]) {
       margin-bottom: 20px;
-    }   
+
+      @media(max-width: 1024px) {
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media(max-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    font-size: 14px;
+  }
+
+  @media(max-width: 630px) {
+    padding: 0;
+    flex-direction: column;
   }
 }
 

@@ -2490,11 +2490,16 @@ h2 {
   background-color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .tabs-nav__btn {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 570px) {
   .tabs-nav__btn {
     padding: 6px 20px;
     margin-right: 20px;
-    font-size: 14px;
   }
   .tabs-nav__btn:last-child {
     margin-right: 0;
@@ -2510,6 +2515,12 @@ h2 {
   display: block;
 }
 
+@media (max-width: 1024px) {
+  .tabs__content {
+    padding: 15px 0;
+  }
+}
+
 .player-detail {
   padding: 24px 30px 0 18px;
   margin-bottom: 40px;
@@ -2522,6 +2533,22 @@ h2 {
 
 .player-detail__img {
   width: 24%;
+}
+
+@media (max-width: 990px) {
+  .player-detail__img {
+    width: auto;
+  }
+}
+
+@media (max-width: 630px) {
+  .player-detail__img {
+    margin-bottom: 15px;
+    border-bottom: 2px solid black;
+  }
+  .player-detail__img img {
+    margin: auto;
+  }
 }
 
 .player-detail__info {
@@ -2547,6 +2574,18 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 630px) {
+  .player-detail__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .player-detail__nickname {
@@ -2590,6 +2629,12 @@ h2 {
   margin-right: 0;
 }
 
+@media (max-width: 630px) {
+  .player-detail__social {
+    margin-bottom: 16px;
+  }
+}
+
 .player-detail__config {
   padding: 6px 16px 6px 35px;
   color: #fff;
@@ -2616,6 +2661,38 @@ h2 {
 
 .player-detail__content p:not([class]) {
   margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .player-detail__content p:not([class]) {
+    margin-bottom: 10px;
+  }
+}
+
+.player-detail__content p:not([class]):last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .player-detail__content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .player-detail {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 630px) {
+  .player-detail {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .devices {
