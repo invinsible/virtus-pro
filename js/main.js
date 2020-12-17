@@ -88,30 +88,7 @@ const filterPost = function () {
 filterPost();
 
 
-// Swiper
-/*
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 1,
-  spaceBetween: 10,
 
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {    
-   
-    450: {
-      slidesPerView: 2,
-      spaceBetween: 20,      
-    },
-
-    769: {
-      slidesPerView: 4,
-      spaceBetween: 20,      
-    },
-  }
-});
-*/
 
 // Sticky Header
 window.onscroll = function() {stickHeader()};

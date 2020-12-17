@@ -1051,12 +1051,12 @@ h2 {
 
   &__item {
     margin-bottom: 0;
-    clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
+    //clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
   }
   
   &__link {
-    padding: 24px 22px 34px;
-    height: 100%;
+    //padding: 24px 22px 34px;
+    height: 415px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1073,6 +1073,7 @@ h2 {
 
       .btn {
         margin-top: auto;
+        margin-bottom: 20px;
       }
     }
 

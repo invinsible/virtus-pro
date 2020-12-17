@@ -1232,13 +1232,10 @@ h2 {
 
 .shop-carousel__item {
   margin-bottom: 0;
-  -webkit-clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
-          clip-path: polygon(0 0, 93% 0, 100% 13%, 100% 100%, 8% 100%, 0 89%);
 }
 
 .shop-carousel__link {
-  padding: 24px 22px 34px;
-  height: 100%;
+  height: 415px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1267,6 +1264,7 @@ h2 {
 
 .shop-carousel__link--btn .btn {
   margin-top: auto;
+  margin-bottom: 20px;
 }
 
 .shop-carousel__link:hover {
