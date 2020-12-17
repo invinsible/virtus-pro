@@ -845,6 +845,10 @@ h2 {
   padding-top: 40px;
 }
 
+.bg-scroll {
+  padding-top: 120px;
+}
+
 @media (min-width: 1440px) {
   .main {
     background-image: url("/img/main-bg.png");
@@ -852,7 +856,6 @@ h2 {
     background-position-x: center;
   }
   .bg-scroll {
-    padding-top: 120px;
     background-attachment: fixed;
     background-position-y: 75px;
   }
@@ -901,6 +904,12 @@ h2 {
   color: #FC5000;
 }
 
+@media (max-width: 880px) {
+  .sort-up__btn {
+    font-size: 13px;
+  }
+}
+
 .sort-up__list {
   position: absolute;
   left: -20px;
@@ -918,6 +927,14 @@ h2 {
   z-index: 50;
 }
 
+@media (max-width: 880px) {
+  .sort-up__list {
+    left: 0;
+    padding: 10px;
+    margin-top: 8px;
+  }
+}
+
 .sort-up__link {
   margin-bottom: 10px;
   color: #fff;
@@ -933,6 +950,13 @@ h2 {
 
 .sort-up__link:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 880px) {
+  .sort-up__link {
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
 }
 
 .big-news {
@@ -1301,6 +1325,15 @@ h2 {
           align-items: flex-start;
 }
 
+@media (max-width: 880px) {
+  .shop__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .shop-filter {
   margin-right: 20px;
   width: 308px;
@@ -1373,6 +1406,13 @@ h2 {
   margin-bottom: 0;
 }
 
+@media (max-width: 880px) {
+  .shop-filter__label {
+    -webkit-clip-path: polygon(0 0, 98% 0, 100% 23%, 100% 100%, 2% 100%, 0 80%);
+            clip-path: polygon(0 0, 98% 0, 100% 23%, 100% 100%, 2% 100%, 0 80%);
+  }
+}
+
 .shop-filter__price {
   padding: 0 17px;
   display: -webkit-box;
@@ -1429,6 +1469,12 @@ h2 {
   color: #fff;
 }
 
+@media (max-width: 880px) {
+  .shop-filter {
+    width: 100%;
+  }
+}
+
 .shop-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1453,6 +1499,12 @@ h2 {
   }
 }
 
+@media (max-width: 550px) {
+  .shop-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1050px) {
   .shop-list__item:nth-child(2n) {
     margin-right: 0;
@@ -1468,6 +1520,13 @@ h2 {
 @media (max-width: 1050px) {
   .shop-list__item {
     width: 48%;
+  }
+}
+
+@media (max-width: 550px) {
+  .shop-list__item {
+    margin-right: 0;
+    width: 100%;
   }
 }
 

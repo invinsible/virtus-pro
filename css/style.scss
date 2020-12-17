@@ -727,6 +727,10 @@ h2 {
   padding-top: 40px;  
 }
 
+.bg-scroll {
+  padding-top: 120px;
+}
+
 
 @media(min-width: 1440px) {
   .main {
@@ -735,8 +739,7 @@ h2 {
     background-position-x: center;
   }
 
-  .bg-scroll {
-    padding-top: 120px;
+  .bg-scroll {    
     background-attachment: fixed;
     background-position-y: 75px;      
   }    
@@ -775,6 +778,10 @@ h2 {
     &:active {
       color: #FC5000;
     }
+
+    @media(max-width: 880px) {
+      font-size: 13px;
+    }
   }
 
   &__list {
@@ -787,6 +794,12 @@ h2 {
     background-color: #1F2326;
     border: 1px solid #FFFFFF;
     z-index: 50;
+
+    @media(max-width: 880px) {
+      left: 0;
+      padding: 10px;
+      margin-top: 8px;
+    }
   }
 
   &__link {
@@ -802,6 +815,11 @@ h2 {
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media(max-width: 880px) {
+      margin-bottom: 8px;
+      font-size: 13px;
     }
   }
 }
@@ -1105,6 +1123,10 @@ h2 {
     position: relative;
     display: flex;
     align-items: flex-start;
+
+    @media(max-width: 880px) {
+      flex-direction: column;
+    }
   }  
 }
 
@@ -1169,7 +1191,11 @@ h2 {
 
     &:last-child {
       margin-bottom: 0;
-    }    
+    }
+    
+    @media(max-width: 880px) {
+      clip-path: polygon(0 0, 98% 0, 100% 23%, 100% 100%, 2% 100%, 0 80%);      
+    }
   }
 
   &__price {
@@ -1209,6 +1235,10 @@ h2 {
       color: #fff;
     }
   }
+
+  @media(max-width: 880px) {
+    width: 100%;
+  }
 }
 
 .shop-list {
@@ -1226,10 +1256,13 @@ h2 {
       @media(max-width: 1050px) {
         margin-right: 20px;
       }
+
+      @media(max-width: 550px) {
+        margin-right: 0;        
+      }
     }
 
     &:nth-child(2n) { 
-
       @media(max-width: 1050px) {
         margin-right: 0;
       }
@@ -1241,6 +1274,11 @@ h2 {
 
     @media(max-width: 1050px) {
       width: 48%;
+    }
+
+    @media(max-width: 550px) {
+      margin-right: 0;
+      width: 100%;
     }
   }
 
