@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Shop</title>
+</head>
+<body>
+  <header class="header">
+    <a class="promo promo--header" ref="#">
+      <img src="/img/promo-header.jpg" alt="">
+    </a>
+
+    <div class="header__wrapper">      
+      <nav class="main-nav">
+        <a class="logo logo--header" href="#">
+          <img src="/img/logo.png" alt="Логотип Virtus Pro">
+        </a>
+
+        <div class="search-wrapper">
+          <button class="menu-mobile" aria-label="Мобильное меню"><span class="burger"></span></button>
+          <ul class="menu">
+            <li class="menu__item active">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Составы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Матч-центр</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Награды</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Магазин</a>
+            </li>
+            <li class="menu__item has-sub">
+              <a class="menu__link" href="#">О клубе</a>
+              <ul class="menu-sub">
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">О нас</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Команда</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Вакансии</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Партнерам</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Сми</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Партнеры</a>
+                </li>
+                <li class="menu-sub__item">
+                  <a class="menu-sub__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Фан центр</a>
+            </li>
+          </ul>
+
+          <form class="search" action="#">
+            <div class="search__item">
+              <input class="search__input" type="text" placeholder="Введите поисковой запрос">
+            </div>            
+            <button class="search__btn searchBtn" type="submit" aria-label="Найти"></button>
+          </form>
+        </div>        
+      </nav>
+      
+      
+      <div class="header__right">
+        <a class="user-lk" href="#">user</a>
+         
+        <div class="switch-lang">
+          <button class="switch-lang__btn" type="button" aria-label="Сменить язык">Eng</button>
+          <ul class="switch-lang__list menu-sub"> 
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Eng</a>
+            </li>
+            <li class="menu-sub__item">
+              <a class="menu-sub__link" href="#">Rus</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+    </div>    
+  </header>
+  <div class="main">    
+    
+    <section class="shop">
+      <div class="container">        
+          <h1>Магазин</h1>
+          
+       
+
+        <div class="shop__wrapper">
+
+          <div class="sort-up">
+            <button class="sort-up__btn sort-arrow" type="btn" aria-label="Сортировка">Сначала новые</button>
+            <div class="sort-up__list">
+              <a class="sort-up__link" href="#">Сначала новые</a>
+              <a class="sort-up__link" href="#">Сначала дороже</a>
+              <a class="sort-up__link" href="#">Сначала дешевле</a>
+            </div>
+          </div>
+
+          <div class="shop-filter">
+            <form action="#">
+              <div class="shop-filter__fieldset">
+                <p>Категория</p>
+                <button class="shop-filter__reset" type="reset">Сбросить</button>
+              </div>
+              <div class="shop-filter__list">
+                <div class="shop-filter__option">
+                  <input class="visually-hidden" type="checkbox" id="filter1">
+                  <label class="shop-filter__label" for="filter1">Одежда</label>
+                </div>
+                <div class="shop-filter__option">
+                  <input class="visually-hidden" type="checkbox" id="filter2">
+                  <label class="shop-filter__label" for="filter2">Техника</label>
+                </div>
+                <div class="shop-filter__option">
+                  <input class="visually-hidden" type="checkbox" id="filter3">
+                  <label class="shop-filter__label" for="filter3">Кресла</label>
+                </div>
+                
+
+                <div class="shop-filter__option">
+                  <input class="visually-hidden" type="checkbox" id="filter4">
+                  <label class="shop-filter__label" for="filter4">Аксессуары</label>
+                </div>
+                
+                
+              </div>
+              
+            </form>
+
+            <form action="#">
+              <div class="shop-filter__fieldset">
+                <p>Цена</p>
+                <button class="shop-filter__reset" type="reset">Сбросить</button>
+              </div>
+              <div class="shop-filter__list">
+                <div class="shop-filter__price">
+                  <label>
+                    от <input class="shop-filter__number" type="number" placeholder="390">
+                  </label>
+                  <label>
+                    до <input class="shop-filter__number" type="number" placeholder="42 990">
+                  </label>
+                </div>
+                
+                
+              </div>
+              
+            </form>
+          </div>
+
+          <div class="shop-products">
+            <ul class="shop-list">
+              <li class="shop-list__item">
+                <a class="shop-list__link" href="#" target="_blank" rel="nofollow">
+                  <div class="shop-list__img">
+                    <img src="/img/shop1.png" alt="">
+                  </div>
+                  <p class="shop-list__title">Колледж куртка Virtus.pro</p>
+                  <p class="shop-list__price">3 990 ₽</p>
+                  <p class="shop-list__btn">Смотреть</p>
+                </a>
+              </li>
+              <li class="shop-list__item">
+                <a class="shop-list__link" href="#" target="_blank" rel="nofollow">
+                  <div class="shop-list__img">
+                    <img src="/img/shop1.png" alt="">
+                  </div>
+                  <p class="shop-list__title">DXRACER OH.VB15.NOW Virtus.pro Edition</p>
+                  <p class="shop-list__price">3 990 ₽</p>
+                  <p class="shop-list__btn">Смотреть</p>
+                </a>
+              </li>
+
+              <li class="shop-list__item">
+                <a class="shop-list__link" href="#" target="_blank" rel="nofollow">
+                  <div class="shop-list__img">
+                    <img src="/img/shop1.png" alt="">
+                  </div>
+                  <p class="shop-list__title">Колледж куртка Virtus.pro</p>
+                  <p class="shop-list__price">3 990 ₽</p>
+                  <p class="shop-list__btn">Смотреть</p>
+                </a>
+              </li>
+
+              <li class="shop-list__item">
+                <a class="shop-list__link" href="#" target="_blank" rel="nofollow">
+                  <div class="shop-list__img">
+                    <img src="/img/shop1.png" alt="">
+                  </div>
+                  <p class="shop-list__title">Колледж куртка Virtus.pro</p>
+                  <p class="shop-list__price">3 990 ₽</p>
+                  <p class="shop-list__btn">Смотреть</p>
+                </a>
+              </li>
+
+              <li class="shop-list__item">
+                <a class="shop-list__link" href="#" target="_blank" rel="nofollow">
+                  <div class="shop-list__img">
+                    <img src="/img/shop1.png" alt="">
+                  </div>
+                  <p class="shop-list__title">Колледж куртка Virtus.pro</p>
+                  
+                  <p class="shop-list__btn">Смотреть</p>
+                </a>
+              </li>
+            </ul>
+            <div class="pagination">
+              <button class="pagination__nav left" aria-label="Предыдущая страница"></button>
+              <ul class="pagination__list">
+                <li class="pagination__item ">
+                  <a class="pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">2</a>
+                </li>
+                <li class="pagination__item active">
+                  <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a class="pagination__link" href="#">4</a>
+                </li>
+              </ul>
+              <button class="pagination__nav right" aria-label="Следующая страница"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>   
+
+    <div class="promo promo--center">
+      <a class="promo__link" href="#" target="_blank" rel="nofollow" >
+        <img src="/img/promo-main.jpg" alt="">
+      </a>      
+    </div>
+
+    <footer class="footer">
+      <div class="container">    
+        <ul class="partners">
+          <li class="partners__item">
+            <a class="partners__link" href="#" target="_blank" rel="nofollow">
+              <img src="/img/partner1.png" alt="Pari Match logo">
+            </a>
+          </li>
+          <li class="partners__item">
+            <a class="partners__link" href="#" target="_blank" rel="nofollow">
+              <img src="/img/partner2.png " alt="HyperX logo">
+            </a>
+          </li>
+          <li class="partners__item">
+            <a class="partners__link" href="#" target="_blank" rel="nofollow">
+              <img src="/img/partner3.png" alt="Haval logo">
+            </a>
+          </li>
+          <li class="partners__item">
+            <a class="partners__link" href="#" target="_blank" rel="nofollow">
+              <img src="/img/partner4.png" alt="Fragstore logo">
+            </a>
+          </li>
+  
+          <li class="partners__item">
+            <a class="partners__link" href="#" target="_blank" rel="nofollow">
+              <img src="/img/partner4.png" alt="Fragstore logo">
+            </a>
+          </li>
+  
+          
+        </ul>
+  
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#" target="_blank"> <img src="/img/fb-icon.png" alt="Virtus Pro в Facebook"> 15 648 946</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#" target="_blank"> <img src="/img/vk-icon.png" alt="Virtus Pro в Vkontakte"> 15 648 946</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#" target="_blank"> <img src="/img/youtube-icon.png" alt="Virtus Pro в Youtube"> 15 648 946</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--in" href="#" target="_blank" > <img src="/img/inst-icon.png" alt="Virtus Pro в Instagramm"> 15 648 946</a>
+          </li>  
+          <li class="social__item">
+            <a class="social__link social__link--tw" href="#" target="_blank"> <img src="/img/tw-icon.png" alt="Virtus Pro в Twitter"> 15 648 946</a>
+          </li> 
+          <li class="social__item">
+            <a class="social__link social__link--tg" href="#" target="_blank"> <img src="/img/tg-icon.png" alt="Virtus Pro в Telegramm"> 15 648 946</a>
+          </li>  
+          <li class="social__item">
+            <a class="social__link social__link--tt" href="#" target="_blank"> <img src="/img/tt-icon.png" alt="Virtus Pro в TikTok"> 15 648 946</a>
+          </li>         
+        </ul>
+      </div>
+      <p class="footer__text"><a class="footer__link" target="_blank" href="#">Правила обработки персональных данных</a> и <a class="footer__link" target="_blank" href="#">политика конфиденциальности сайта virtus.pro</a></p>
+      <p class="footer__copyright">© 2003 — 2020 VIRTUS.PRO При копировании материалов активная ссылка на сайт обязательна</p>
+    </footer>
+  </div>  
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

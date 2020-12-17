@@ -89,10 +89,11 @@ filterPost();
 
 
 // Swiper
+/*
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
   spaceBetween: 10,
-  // init: false,
+
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -110,7 +111,7 @@ const swiper = new Swiper('.swiper-container', {
     },
   }
 });
-
+*/
 
 // Sticky Header
 window.onscroll = function() {stickHeader()};
