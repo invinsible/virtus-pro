@@ -1817,6 +1817,13 @@ h2 {
   margin-bottom: 0px;
 }
 
+@media (max-width: 580px) {
+  .matches__item {
+    -webkit-clip-path: polygon(0 0, 96% 0, 100% 9%, 100% 100%, 5% 100%, 0 92%);
+            clip-path: polygon(0 0, 96% 0, 100% 9%, 100% 100%, 5% 100%, 0 92%);
+  }
+}
+
 .matches__link {
   padding: 20px 15% 20px 20px;
   display: -webkit-box;
@@ -1845,14 +1852,53 @@ h2 {
   color: #1F2326;
 }
 
+@media (max-width: 1024px) {
+  .matches__link .post-meta .date {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 580px) {
+  .matches__link .post-meta .date {
+    margin-top: 0;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .matches__link .post-meta .label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 580px) {
+  .matches__link .post-meta .label {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 580px) {
+  .matches__link .post-meta {
+    padding-top: 10px;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-top: 2px solid #1F2326;
+  }
+}
+
 @media (max-width: 880px) {
   .matches__link {
     padding: 20px 3% 20px 20px;
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 580px) {
   .matches__link {
+    padding: 13px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -1884,6 +1930,12 @@ h2 {
   margin-top: 3px;
 }
 
+@media (max-width: 580px) {
+  .matches__versus .score {
+    font-size: 24px;
+  }
+}
+
 .matches__versus .matches__team:nth-of-type(1) .team-name {
   margin-right: 15px;
 }
@@ -1897,6 +1949,12 @@ h2 {
 
 .matches__versus .matches__team:nth-of-type(2) .team-name {
   margin-left: 15px;
+}
+
+@media (max-width: 580px) {
+  .matches__versus {
+    margin-bottom: 17px;
+  }
 }
 
 .matches__team {
@@ -1925,8 +1983,15 @@ h2 {
   width: 40px;
 }
 
+@media (max-width: 1024px) {
+  .matches__team {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 880px) {
   .matches__team {
+    width: 65px;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: reverse !important;
         -ms-flex-direction: column-reverse !important;
@@ -1945,10 +2010,15 @@ h2 {
   text-transform: uppercase;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1024px) {
   .matches__info {
     font-size: 14px;
-    text-align: right;
+  }
+}
+
+@media (max-width: 580px) {
+  .matches__info {
+    text-align: center;
   }
 }
 
