@@ -1728,9 +1728,15 @@ h2 {
   padding: 20px;
   margin-bottom: 30px;
   background-color: #fff; 
+  clip-path: polygon(0 0, 97% 0, 100% 5%, 100% 100%, 3% 100%, 0 96%);
   
   .label {
     position: absolute;
+
+    @media(max-width: 650px) {
+      position: relative;
+      margin-bottom: 10px;
+    }
   }
 
   &__wrapper {
@@ -1738,25 +1744,64 @@ h2 {
     max-width: 530px;
     font-size: 18px;
     font-weight: 700;
+
+    @media(max-width: 1024px) {
+      font-size: 16px;
+    }
+  }
+
+  &__team {
+    @media(max-width: 1024px) {
+      width: 125px;
+    }
+    @media(max-width: 440px) {
+      width: 70px;
+    }
+  }
+
+  &__team-name {
+    text-align: center;
   }
 
   &__title,
   &__tournament {
     font-size: 1.33em;
     text-align: center;
+
+    @media(max-width: 768px) {
+      font-size: 1.25em;
+    }
   }
 
   &__tournament {
     margin: 10px 0 35px;
+
+    @media(max-width: 768px) {
+      margin: 5px 0 25px;
+    }
   }
 
   &__mid {
     margin: 0 55px;
+
+    @media(max-width: 650px) {
+      margin: 0 15px;
+    }
   }
 
   &__score {
     font-size: 2.33em;
     text-align: center;
+
+    @media(max-width: 460px) {
+      font-size: 24px;
+    }
+  }
+
+  &__date {
+    @media(max-width: 460px) {
+      font-size: 12px;
+    }
   }
 
   &__versus {
@@ -1787,6 +1832,10 @@ h2 {
       font-size: 12px;
       font-weight: 400;
     }
+  }
+
+  @media(max-width: 430px) {
+    clip-path: polygon(0 0, 96% 0, 100% 3%, 100% 100%, 4% 100%, 0 98%);
   }
 }
 

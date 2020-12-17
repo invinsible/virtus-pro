@@ -2104,10 +2104,19 @@ h2 {
   padding: 20px;
   margin-bottom: 30px;
   background-color: #fff;
+  -webkit-clip-path: polygon(0 0, 97% 0, 100% 5%, 100% 100%, 3% 100%, 0 96%);
+          clip-path: polygon(0 0, 97% 0, 100% 5%, 100% 100%, 3% 100%, 0 96%);
 }
 
 .match-detail .label {
   position: absolute;
+}
+
+@media (max-width: 650px) {
+  .match-detail .label {
+    position: relative;
+    margin-bottom: 10px;
+  }
 }
 
 .match-detail__wrapper {
@@ -2117,22 +2126,74 @@ h2 {
   font-weight: 700;
 }
 
+@media (max-width: 1024px) {
+  .match-detail__wrapper {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .match-detail__team {
+    width: 125px;
+  }
+}
+
+@media (max-width: 440px) {
+  .match-detail__team {
+    width: 70px;
+  }
+}
+
+.match-detail__team-name {
+  text-align: center;
+}
+
 .match-detail__title, .match-detail__tournament {
   font-size: 1.33em;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .match-detail__title, .match-detail__tournament {
+    font-size: 1.25em;
+  }
 }
 
 .match-detail__tournament {
   margin: 10px 0 35px;
 }
 
+@media (max-width: 768px) {
+  .match-detail__tournament {
+    margin: 5px 0 25px;
+  }
+}
+
 .match-detail__mid {
   margin: 0 55px;
+}
+
+@media (max-width: 650px) {
+  .match-detail__mid {
+    margin: 0 15px;
+  }
 }
 
 .match-detail__score {
   font-size: 2.33em;
   text-align: center;
+}
+
+@media (max-width: 460px) {
+  .match-detail__score {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 460px) {
+  .match-detail__date {
+    font-size: 12px;
+  }
 }
 
 .match-detail__versus {
@@ -2175,6 +2236,13 @@ h2 {
   max-width: 250px;
   font-size: 12px;
   font-weight: 400;
+}
+
+@media (max-width: 430px) {
+  .match-detail {
+    -webkit-clip-path: polygon(0 0, 96% 0, 100% 3%, 100% 100%, 4% 100%, 0 98%);
+            clip-path: polygon(0 0, 96% 0, 100% 3%, 100% 100%, 4% 100%, 0 98%);
+  }
 }
 
 .awards {
