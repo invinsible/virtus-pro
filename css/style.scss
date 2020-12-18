@@ -254,6 +254,11 @@ h2 {
     }
   }
 
+  .filterPostIcon {
+    max-width: 24px;
+    display: none;
+  }
+
   .show {
     display: block;
   }
@@ -281,7 +286,12 @@ h2 {
     align-items: center;
 
     img {
+      max-width: 24px;
       margin-right: 5px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
     }
   } 
 
@@ -331,14 +341,34 @@ h2 {
     }
   }
 
-  &__reset {
-    color: #FC5000;
+  &__button {
+    margin: 0 auto 15px auto;
+    display: block;
+    color: #888888;
     font-size: 16px;
     outline: none;
     border: 0;
     background-color: transparent;
     text-transform: uppercase;
     cursor: pointer;
+    transition: color 0.25s, opacity 0.2s;
+
+    &:hover {
+      color: #FC5000;      
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &--submit {
+      display: none;      
+      color: #1F2326;
+    }
+
+    &--reset {
+      margin-bottom: 0;
+    }
   }
 }
 

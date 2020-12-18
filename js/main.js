@@ -61,27 +61,78 @@ if(partnersItems.length >= 5) {
 
 //Filter posts
 const filterPost = function () {
-  const filterBtn = document.querySelectorAll('.filterBtn');
-  const filterForm = document.querySelectorAll('.filterForm');
+  const filterBtn = document.querySelector('.filterBtn');
+  const filterBtnText = filterBtn.querySelector('.filterBtnText');   
+  const filterCount = filterBtn.querySelector('.filterCount'); 
+  const icon = filterBtn.querySelector('.filterPostIcon');
 
-  filterBtn.forEach(item => { 
-    item.addEventListener('click', filterHandler);
-  })
+  const filterForm = document.querySelector('.filterForm');
+  const checkbox = filterForm.querySelectorAll('.filter-post__input');
 
-  filterForm.forEach(item => {
-    item.addEventListener('input', postCountHandler);
-    item.addEventListener('reset', function(){
-      this.previousElementSibling.querySelector('.filter-count').classList.remove('show');
-    })
-  })
+  var checkCounter = 0;
+  
+  // Default text in button
+  filterBtnText.textContent = filterBtn.dataset.defaultText;  
+  
+  filterBtn.addEventListener('click', showFilterForm); 
+  
+  checkbox.forEach(item => {
+    item.addEventListener('input', checkboxHandler);
+  });
 
-  function filterHandler(e) {
+  function checkboxHandler() {
+    if (this.checked == true) {
+      checkCounter += 1;         
+    } else {       
+      checkCounter -= 1;
+    }
+
+    // Set button text if we have only one checked element
+    if ( checkCounter === 1) {
+      checkbox.forEach(item => {
+        if(item.checked) {
+          let parent = item.closest('.filter-post__option');
+          filterBtnText.textContent = parent.querySelector('label').textContent;
+
+          if (parent.querySelector('img')) {
+            icon.src = parent.querySelector('img').getAttribute('src');
+            icon.classList.add('show')           
+          } else {
+            icon.classList.remove('show')
+          }  
+        }
+      });
+    }
+    
+    // Set default text when no checked elements
+    if (checkCounter < 1) {
+      filterBtnText.textContent = filterBtn.dataset.defaultText;
+    }
+
+    // Render counter 
+    if ( checkCounter > 1) {
+      filterCount.classList.add('show');        
+      filterCount.textContent = "+ " + (checkCounter - 1);
+    } else {
+      filterCount.classList.remove('show');
+    }
+  };
+
+  filterForm.addEventListener('reset', function(){
+    checkCounter = 0;
+    this.previousElementSibling.querySelector('.filterCount').classList.remove('show');
+    icon.classList.remove('show')
+    filterBtnText.textContent = filterBtn.dataset.defaultText;
+  });
+  
+
+  function showFilterForm(e) {
     e.preventDefault();    
-    this.nextElementSibling.classList.toggle('show');
+    filterForm.classList.toggle('show');
   }
 
   function postCountHandler() {
-    this.previousElementSibling.querySelector('.filter-count').classList.add('show');    
+    //this.previousElementSibling.querySelector('.filterCount').classList.add('show');    
   }
 };
 

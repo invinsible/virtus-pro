@@ -288,6 +288,11 @@ h2 {
   font-style: normal;
 }
 
+.filter-post .filterPostIcon {
+  max-width: 24px;
+  display: none;
+}
+
 .filter-post .show {
   display: block;
 }
@@ -319,7 +324,12 @@ h2 {
 }
 
 .filter-post__option img {
+  max-width: 24px;
   margin-right: 5px;
+}
+
+.filter-post__option:last-of-type {
+  margin-bottom: 20px;
 }
 
 .filter-post__label {
@@ -374,14 +384,35 @@ h2 {
           transform: scale(1);
 }
 
-.filter-post__reset {
-  color: #FC5000;
+.filter-post__button {
+  margin: 0 auto 15px auto;
+  display: block;
+  color: #888888;
   font-size: 16px;
   outline: none;
   border: 0;
   background-color: transparent;
   text-transform: uppercase;
   cursor: pointer;
+  -webkit-transition: color 0.25s, opacity 0.2s;
+  transition: color 0.25s, opacity 0.2s;
+}
+
+.filter-post__button:hover {
+  color: #FC5000;
+}
+
+.filter-post__button:active {
+  opacity: 0.5;
+}
+
+.filter-post__button--submit {
+  display: none;
+  color: #1F2326;
+}
+
+.filter-post__button--reset {
+  margin-bottom: 0;
 }
 
 .header__wrapper {
