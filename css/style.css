@@ -338,6 +338,8 @@ h2 {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
+  -webkit-transition: color 0.25s;
+  transition: color 0.25s;
   cursor: pointer;
 }
 
@@ -373,6 +375,10 @@ h2 {
 
 .filter-post__label--text::after {
   left: -21px;
+}
+
+.filter-post__label:hover {
+  color: #FC5000;
 }
 
 .filter-post__input:checked + label {

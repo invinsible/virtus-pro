@@ -301,6 +301,7 @@ h2 {
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
+    transition: color 0.25s;
     cursor: pointer;
 
     &::before {
@@ -331,6 +332,10 @@ h2 {
 
     &--text::after {
       left: -21px;
+    }
+
+    &:hover {
+      color: #FC5000;
     }
   }
 

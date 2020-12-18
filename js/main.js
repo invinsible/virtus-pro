@@ -70,6 +70,7 @@ const filterPost = function () {
   const checkbox = filterForm.querySelectorAll('.filter-post__input');
 
   var checkCounter = 0;
+  var blabla = false;
   
   // Default text in button
   filterBtnText.textContent = filterBtn.dataset.defaultText;  
@@ -81,47 +82,62 @@ const filterPost = function () {
   });
 
   function checkboxHandler() {
+
     if (this.checked == true) {
-      checkCounter += 1;         
+      checkCounter += 1;    
+      
     } else {       
       checkCounter -= 1;
     }
 
-    // Set button text if we have only one checked element
-    if ( checkCounter === 1) {
-      checkbox.forEach(item => {
-        if(item.checked) {
-          let parent = item.closest('.filter-post__option');
-          filterBtnText.textContent = parent.querySelector('label').textContent;
+    const firstCheck = filterForm.querySelector('.filter-post__input:checked');    
 
-          if (parent.querySelector('img')) {
-            icon.src = parent.querySelector('img').getAttribute('src');
-            icon.classList.add('show')           
-          } else {
-            icon.classList.remove('show')
-          }  
-        }
-      });
+    // Set button text if we have only one checked element
+    if ( checkCounter >= 1 ) {
+      let parent = firstCheck.closest('.filter-post__option');
+      filterBtnText.textContent = parent.querySelector('label').textContent;     
+
+      if (parent.querySelector('img')) {
+        icon.src = parent.querySelector('img').getAttribute('src');
+        icon.classList.add('show')           
+      } else {
+        icon.classList.remove('show')
+      } 
+
+      // checkbox.forEach(item => {
+      //   if(item.checked) {
+      //     let parent = item.closest('.filter-post__option');
+      //     filterBtnText.textContent = parent.querySelector('label').textContent;
+
+      //     if (parent.querySelector('img')) {
+      //       icon.src = parent.querySelector('img').getAttribute('src');
+      //       icon.classList.add('show')           
+      //     } else {
+      //       icon.classList.remove('show')
+      //     }  
+      //   }
+      // });
     }
     
     // Set default text when no checked elements
     if (checkCounter < 1) {
       filterBtnText.textContent = filterBtn.dataset.defaultText;
+      icon.classList.remove('show');
     }
 
     // Render counter 
     if ( checkCounter > 1) {
       filterCount.classList.add('show');        
       filterCount.textContent = "+ " + (checkCounter - 1);
-    } else {
+    } else {      
       filterCount.classList.remove('show');
     }
   };
 
-  filterForm.addEventListener('reset', function(){
+  filterForm.addEventListener('reset', function(){    
     checkCounter = 0;
     this.previousElementSibling.querySelector('.filterCount').classList.remove('show');
-    icon.classList.remove('show')
+    icon.classList.remove('show');
     filterBtnText.textContent = filterBtn.dataset.defaultText;
   });
   
@@ -156,5 +172,3 @@ function stickHeader() {
       main.classList.remove('bg-scroll');
   }
 }
-
-
