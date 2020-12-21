@@ -101,17 +101,18 @@
       <div class="container">
         <h1>Новости</h1>
         <div class="filter-post">
-          <button class="filter-post__btn filterBtn" type="button">
-            <img src="/img/small_vp.png" alt="">Все новости
-            <span class="filter-count">+ <i>1</i></span>
+          <button class="filter-post__btn filterBtn" type="button" data-default-text="Все новости">
+            <img class="filterPostIcon" src="" alt="">
+            <span class="filterBtnText">Все новости</span>            
+            <span class="filter-count filterCount"></span>
           </button>          
           <form class="filter-post__form filterForm" action="#">            
-            <div class="filter-post__option">              
+            <div class="filter-post__option">
               <input class="filter-post__input visually-hidden" type="checkbox" id="id1">
               <label class="filter-post__label filter-post__label--text" for="id1">Новости клуба</label>                
             </div>
             <div class="filter-post__option">
-              <img src="/img/small_vp.png" alt="">
+              <img src="/img/match-item2.png" alt="">
               <input class="filter-post__input visually-hidden" type="checkbox" id="id2">
               <label class="filter-post__label" for="id2">Dota 2</label>                
             </div>
@@ -130,7 +131,8 @@
               <input class="filter-post__input visually-hidden" type="checkbox" id="id5">
               <label class="filter-post__label" for="id5">Dota 2</label>                
             </div>
-            <button class="filter-post__reset" type="reset">Сбросить</button>                     
+            <button class="filter-post__button filter-post__button--submit" type="submit">Применить</button>
+            <button class="filter-post__button filter-post__button--reset" type="reset">Сбросить</button>                     
           </form>
         </div>
 

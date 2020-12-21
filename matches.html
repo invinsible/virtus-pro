@@ -101,36 +101,34 @@
       <h1>Матчи</h1>
 
       <div class="filter-post">
-        <button class="filter-post__btn filterBtn" type="button">
-          Все матчи
-          <span class="filter-count">+ <i>1</i></span>          
-        </button>
+        <button class="filter-post__btn filterBtn" type="button" data-default-text="Все матчи">
+          <img class="filterPostIcon" src="" alt="">
+          <span class="filterBtnText">Все матчи</span>            
+          <span class="filter-count filterCount"></span>
+        </button>          
         <form class="filter-post__form filterForm" action="#">
-          <div class="filter-post__option">              
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id11">
-            <label class="filter-post__label filter-post__label--text" for="id11">Новости клуба</label>                
+          <div class="filter-post__option">
+            <img src="/img/match-item2.png" alt="">
+            <input class="filter-post__input visually-hidden" type="checkbox" id="id2">
+            <label class="filter-post__label" for="id2">Dota 2</label>                
           </div>
           <div class="filter-post__option">
             <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id21">
-            <label class="filter-post__label" for="id21">Dota 2</label>                
+            <input class="filter-post__input visually-hidden" type="checkbox" id="id3">
+            <label class="filter-post__label" for="id3">Cs:Go</label>                
           </div>
           <div class="filter-post__option">
             <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id31">
-            <label class="filter-post__label" for="id31">Cs:Go</label>                
+            <input class="filter-post__input visually-hidden" type="checkbox" id="id4">
+            <label class="filter-post__label" for="id4">Fortnite</label>                
           </div>
           <div class="filter-post__option">
             <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id41">
-            <label class="filter-post__label" for="id41">Fortnite</label>                
+            <input class="filter-post__input visually-hidden" type="checkbox" id="id5">
+            <label class="filter-post__label" for="id5">Dota 2</label>                
           </div>
-          <div class="filter-post__option">
-            <img src="/img/small_vp.png" alt="">
-            <input class="filter-post__input visually-hidden" type="checkbox" id="id51">
-            <label class="filter-post__label" for="id51">Dota 2</label>                
-          </div>
-          <button class="filter-post__reset" type="reset">Сбросить</button>
+          <button class="filter-post__button filter-post__button--submit" type="submit">Применить</button>
+          <button class="filter-post__button filter-post__button--reset" type="reset">Сбросить</button>                     
         </form>
       </div>
 

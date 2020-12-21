@@ -62,18 +62,20 @@ if(partnersItems.length >= 5) {
 //Filter posts
 const filterPost = function () {
   const filterBtn = document.querySelector('.filterBtn');
-  const filterBtnText = filterBtn.querySelector('.filterBtnText');   
+  if( filterBtn === null) {
+    return
+  }
+  const filterBtnText = filterBtn.querySelector('.filterBtnText');
   const filterCount = filterBtn.querySelector('.filterCount'); 
   const icon = filterBtn.querySelector('.filterPostIcon');
 
   const filterForm = document.querySelector('.filterForm');
   const checkbox = filterForm.querySelectorAll('.filter-post__input');
 
-  var checkCounter = 0;
-  var blabla = false;
+  let checkCounter = 0;
   
   // Default text in button
-  filterBtnText.textContent = filterBtn.dataset.defaultText;  
+  //filterBtnText.textContent = filterBtn.dataset.defaultText;
   
   filterBtn.addEventListener('click', showFilterForm); 
   
@@ -84,13 +86,12 @@ const filterPost = function () {
   function checkboxHandler() {
 
     if (this.checked == true) {
-      checkCounter += 1;    
-      
+      checkCounter += 1;
     } else {       
       checkCounter -= 1;
     }
 
-    const firstCheck = filterForm.querySelector('.filter-post__input:checked');    
+    const firstCheck = filterForm.querySelector('.filter-post__input:checked');
 
     // Set button text if we have only one checked element
     if ( checkCounter >= 1 ) {
@@ -102,21 +103,7 @@ const filterPost = function () {
         icon.classList.add('show')           
       } else {
         icon.classList.remove('show')
-      } 
-
-      // checkbox.forEach(item => {
-      //   if(item.checked) {
-      //     let parent = item.closest('.filter-post__option');
-      //     filterBtnText.textContent = parent.querySelector('label').textContent;
-
-      //     if (parent.querySelector('img')) {
-      //       icon.src = parent.querySelector('img').getAttribute('src');
-      //       icon.classList.add('show')           
-      //     } else {
-      //       icon.classList.remove('show')
-      //     }  
-      //   }
-      // });
+      }
     }
     
     // Set default text when no checked elements
@@ -134,7 +121,7 @@ const filterPost = function () {
     }
   };
 
-  filterForm.addEventListener('reset', function(){    
+  filterForm.addEventListener('reset', function(){
     checkCounter = 0;
     this.previousElementSibling.querySelector('.filterCount').classList.remove('show');
     icon.classList.remove('show');
@@ -145,16 +132,33 @@ const filterPost = function () {
   function showFilterForm(e) {
     e.preventDefault();    
     filterForm.classList.toggle('show');
-  }
-
-  function postCountHandler() {
-    //this.previousElementSibling.querySelector('.filterCount').classList.add('show');    
-  }
+  };  
 };
 
 filterPost();
 
+const sortUp = function() {
+  const sortUpBtn = document.querySelector('.sortUp');
+  const sortUpList = document.querySelector('.sortUpList');
+  const links = sortUpList.querySelectorAll('.sort-up__link');
 
+  links.forEach(item => {
+    item.addEventListener('click', function(e){
+      e.preventDefault();     
+      sortUpBtn.textContent = this.textContent;
+      sortUpList.classList.remove('show');
+      sortUpBtn.classList.remove('active');
+    });
+  });
+
+  sortUpBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    this.classList.toggle('active');
+    sortUpList.classList.toggle('show')
+  });
+}
+
+sortUp();
 
 
 // Sticky Header
