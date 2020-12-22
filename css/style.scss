@@ -148,13 +148,14 @@ h2 {
   position: relative;
   display: block;
   z-index: 40;
+  text-align: center;
   overflow: hidden;
 
-  &--center {
-    margin-bottom: 40px;
 
-    img {
-      margin: 0 auto;
+  &--center {
+    margin-bottom: 40px;   
+
+    img {     
       
       @media(max-width: 800px) {
         max-width: none;
@@ -168,8 +169,25 @@ h2 {
     }
   }
 
+  &--header {
+
+    img {
+
+      @media(max-width: 1024px) {
+        max-width: none;
+        transform: translateX(-9%);
+      }
+
+      @media(max-width: 765px) {        
+        transform: translateX(-39%);
+      }
+    }
+
+    
+  }
+
   &__link {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -380,6 +398,7 @@ h2 {
 
   &__wrapper {
     position: relative;
+    margin-top: -4px;
     display: flex;
     align-items: center;
     justify-content: space-between;

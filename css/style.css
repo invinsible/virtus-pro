@@ -159,15 +159,12 @@ h2 {
   position: relative;
   display: block;
   z-index: 40;
+  text-align: center;
   overflow: hidden;
 }
 
 .promo--center {
   margin-bottom: 40px;
-}
-
-.promo--center img {
-  margin: 0 auto;
 }
 
 @media (max-width: 800px) {
@@ -186,8 +183,23 @@ h2 {
   }
 }
 
+@media (max-width: 1024px) {
+  .promo--header img {
+    max-width: none;
+    -webkit-transform: translateX(-9%);
+            transform: translateX(-9%);
+  }
+}
+
+@media (max-width: 765px) {
+  .promo--header img {
+    -webkit-transform: translateX(-39%);
+            transform: translateX(-39%);
+  }
+}
+
 .promo__link {
-  display: block;
+  display: inline-block;
 }
 
 .label {
@@ -422,6 +434,7 @@ h2 {
 
 .header__wrapper {
   position: relative;
+  margin-top: -4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
