@@ -139,6 +139,10 @@ filterPost();
 
 const sortUp = function() {
   const sortUpBtn = document.querySelector('.sortUp');
+
+  if( sortUpBtn === null) {
+    return
+  }
   const sortUpList = document.querySelector('.sortUpList');
   const links = sortUpList.querySelectorAll('.sort-up__link');
 
@@ -176,3 +180,20 @@ function stickHeader() {
       main.classList.remove('bg-scroll');
   }
 }
+
+// Share button
+const share = function() {
+  const shareBtn = document.querySelector('.shareBtn');
+  const shareList = document.querySelector('.shareList');
+
+  if( shareBtn === null) {
+    return
+  }
+
+  shareBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    this.classList.toggle('active');    
+  });
+}
+
+share();
