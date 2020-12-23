@@ -1187,13 +1187,7 @@ h2 {
   }
 }
 
-.shop-carousel {
-
-  &.desktop-disabled {
-    @media(min-width:1023px) {
-      transform: translate3d(0px, 0, 0) !important;
-    }
-  }
+.shop-carousel {  
 
   &__item {
     margin-bottom: 0;
@@ -1259,6 +1253,12 @@ h2 {
       max-width: 190px;
       font-size: 14px;
     }
+  }
+}
+
+.desktop-disabled {
+  @media(min-width:1023px) {
+    transform: translate3d(0px, 0, 0) !important;
   }
 }
 
@@ -3117,11 +3117,4 @@ $mr: 20px;
 .col {
   padding: 0 $mr/2;
   margin-bottom: 40px;
-}
-
-
-
-
-.swiper-wrapper {
-  //box-sizing: border-box;
 }

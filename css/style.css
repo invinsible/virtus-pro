@@ -1385,13 +1385,6 @@ h2 {
   z-index: 5;
 }
 
-@media (min-width: 1023px) {
-  .shop-carousel.desktop-disabled {
-    -webkit-transform: translate3d(0px, 0, 0) !important;
-            transform: translate3d(0px, 0, 0) !important;
-  }
-}
-
 .shop-carousel__item {
   margin-bottom: 0;
   -webkit-clip-path: polygon(0 0, 95% 0, 100% 4%, 100% 100%, 5% 100%, 0 96%);
@@ -1478,6 +1471,13 @@ h2 {
   .shop-carousel__name {
     max-width: 190px;
     font-size: 14px;
+  }
+}
+
+@media (min-width: 1023px) {
+  .desktop-disabled {
+    -webkit-transform: translate3d(0px, 0, 0) !important;
+            transform: translate3d(0px, 0, 0) !important;
   }
 }
 
