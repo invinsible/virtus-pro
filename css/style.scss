@@ -105,6 +105,11 @@ h2 {
     background-color: #FE5000;
     color: #fff;
   }
+
+  @media(max-width: 768px) {
+    padding: 12px 35px;
+    font-size: 1em;
+  }
 }
 
 .container {
@@ -1838,13 +1843,17 @@ h2 {
       text-transform: uppercase;
     }
 
-    @media(max-width: 1024px) {
+    @media(max-width: 1024px) {      
       font-size: 14px;      
     }
 
     @media(max-width: 650px) {
       text-align: center;
     }
+  }
+
+  @media(max-width: 768px) {
+    margin-bottom: 35px;
   }
 }
 

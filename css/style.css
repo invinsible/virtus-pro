@@ -113,6 +113,13 @@ h2 {
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .btn {
+    padding: 12px 35px;
+    font-size: 1em;
+  }
+}
+
 .container {
   padding: 0 7px;
   margin: 0 auto;
@@ -2249,6 +2256,12 @@ h2 {
 @media (max-width: 650px) {
   .matches__info {
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .matches {
+    margin-bottom: 35px;
   }
 }
 
