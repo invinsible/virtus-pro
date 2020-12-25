@@ -297,7 +297,6 @@ h2 {
 
 .filter-post .filter-count {
   padding: 3px;
-  display: none;
   margin-left: 10px;
   color: #fff;
   background-color: #FC5000;
@@ -309,7 +308,6 @@ h2 {
 
 .filter-post .filterPostIcon {
   max-width: 24px;
-  display: none;
 }
 
 .filter-post .show {
