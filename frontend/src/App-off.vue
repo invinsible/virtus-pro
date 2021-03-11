@@ -131,7 +131,7 @@ export default {
   methods: {
     getData() {
       this.isLoading = true;      
-      fetch('http://localhost:8080/products.json')
+      fetch('/products.json')
       .then(response => {
         if (response.ok) {
           return response.json()
