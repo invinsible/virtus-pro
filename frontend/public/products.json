@@ -1,0 +1,136 @@
+{
+  "products": [
+    { 
+      "id": 0,  
+      "name": "Колледж куртка Virtus.pro",
+      "img": "/img/shop1.png",
+      "category": "wear",
+      "link": "https://mail.ru",
+      "price": 3600
+    },
+    {
+      "id": 1,    
+      "name": "DXRACER OH.VB15.NOW Virtus.pro Edition",
+      "img": "/img/shop1.png",
+      "category": "teh",
+      "link": "https://yandex.ru",
+      "price": 5600
+    },
+    {
+      "id": 2,    
+      "name": "Свитерок Virtus Pro 322",
+      "img": "/img/shop1.png",
+      "category": "aks",
+      "link": "https://google.ru",
+      "price": 15600
+    },
+    {
+      "id": 3,    
+      "name": "Рубашечка",
+      "img": "/img/shop1.png",
+      "category": "aks",
+      "link": "https://google.ru",
+      "price": 600
+    }
+  ],
+  "categories" : [
+    {
+      "name" : "Одежда",
+      "url": "wear"
+    },
+    {
+      "name" : "Кресла",
+      "url": "chair"
+    },
+    {
+      "name" : "Техника",
+      "url": "teh"
+    },
+    {
+      "name" : "Аксессуары",
+      "url": "aks"
+    }
+  ],
+  "awards": [
+    {
+      "logo": "/img/match-item1.png",
+      "game": "Dota2",
+      "rate": 1,
+      "tournament": "ESL One Birmingham 2018",
+      "place": "Бирмингем, Великобритания",
+      "date": "00.00.00 — 00.00.00",
+      "dateEndTimeStamp": 1608768000,
+      "money": 100000,
+      "team" : "dota2-gambit"
+    },
+    {
+      "logo": "/img/match-item2.png",
+      "game": "Fortnite",
+      "rate": 31,
+      "tournament": "Крупный турнир",
+      "place": "Город, Страна",
+      "date": "00.00.00 — 00.00.00",
+      "dateEndTimeStamp": 1608422400,
+      "money": 200,
+      "team" : "fortnite-vp"
+    },
+    {
+      "logo": "/img/match-item1.png",
+      "game": "CS:Go",
+      "rate": 2,
+      "tournament": "Крупнейший турнир",
+      "place": "Город, Страна",
+      "date": "00.00.00 — 00.00.00",
+      "dateEndTimeStamp": 1606780800,
+      "money": 60000,
+      "team" : "cs-go-vp"
+    },
+    {
+      "logo": "/img/match-item1.png",
+      "game": "Dota2",
+      "rate": 3,
+      "tournament": "Мажор турнир",
+      "place": "Город, Страна",
+      "date": "00.00.00 — 00.00.00",
+      "dateEndTimeStamp": 1605225600,
+      "money": 1160000,
+      "team" : "dota2-vp"
+    }
+  ],
+  "filterPost" : [
+    {
+      "name" : "Новости клуба",
+      "url": "all-news"
+    },
+    {
+      "name" : "Dota2",
+      "url": "dota2-vp",
+      "img": "/img/small_vp.png"
+    },
+    {
+      "name" : "Dota2",
+      "url": "dota2-gambit",
+      "img": "/img/match-item2.png"
+    },
+    {
+      "name" : "Fortnite",
+      "url": "fortnite-vp",
+      "img": "/img/match-item2.png"
+    },
+    {
+      "name" : "Cs:Go",
+      "url": "cs-go-vp",
+      "img": "/img/match-item2.png"
+    }
+  ],
+  "sortUpList" : [
+    {
+      "name": "За все время",
+      "value": "all"
+    },
+    {
+      "name": "За год",
+      "value": "year"
+    }
+  ]
+}
