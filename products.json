@@ -131,6 +131,18 @@
     {
       "name": "За год",
       "value": "year"
+    },
+    {
+      "name": "Сначала новые",
+      "value": "new"
+    },
+    {
+      "name": "Сначала дороже",
+      "value": "expensive"
+    },
+    {
+      "name": "Сначала дешевле",
+      "value": "cheap"
     }
   ]
 }

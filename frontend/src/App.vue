@@ -1,189 +1,170 @@
 <template>
-  <div>
-    <div class="sort-wrapper">
-      <filter-post :items="filterPost" 
-        @apply-post-filter="applyPostFilter"
-      />
+  <div class="shop__wrapper">
+    <sort-up
+      :items="sortUpList"
+      :currentItem="sortBy"
+      @apply-sort-up="applySortUp"
+    />   
 
-      <sort-up
-        :items="sortUpList"
-        :currentItem="sortPeriod"
-        @apply-sort-up="applySortUp"
-      />
+    <div class="shop-filter">
+      <form action="#">
+        <div class="shop-filter__fieldset">
+          <p>Категория</p>
+          <button class="shop-filter__reset" type="reset" @click="resetFilter">Сбросить</button>
+        </div>
+        <div class="shop-filter__list">
+          <shop-filter-option
+            v-for="category in categories"
+            :key="category.id"            
+            :name="category.name"
+            :url="category.url"
+            @check-option="checkboxHandler"
+          />
+        </div>        
+      </form>
+      <form action="#">
+        <div class="shop-filter__fieldset">
+          <p>Цена</p>
+          <button class="shop-filter__reset" type="reset" @click="resetFilter">Сбросить</button>
+        </div>
+        <div class="shop-filter__list">
+          <div class="shop-filter__price">
+            <label>
+              от <input class="shop-filter__number" type="number" placeholder="390" v-model="filterMinPrice">
+            </label>
+            <label>
+              до <input class="shop-filter__number" type="number" placeholder="42990" v-model="filterMaxPrice">
+            </label>
+          </div>
+        </div>        
+      </form>     
     </div>
-    <p v-if="isLoading" class="filterStatus">Загрузка...</p>
-    <p v-else-if="!isLoading && awards.length === 0" class="filterStatus">
-      Награды не найдены
-    </p>
-    <ul v-else-if="!isLoading && awards.length > 0" class="awards">
-      <li class="awards__item awards__item--first">
-        <div class="awards__logo">Состав</div>
-        <div class="awards__game">Дисциплина</div>
-        <p
-          class="awards__rate sort-arrow"
-          @click="toggleCurrentSorting('rate')"
-          :class="{ active: (currentSorting == 'rate') }"
-        >
-          Место
-        </p>
-        <p class="awards__tournament">Турнир</p>
-        <p class="awards__place">Место проведения</p>
 
-        <p
-          class="awards__date sort-arrow"
-          @click="toggleCurrentSorting('dateEnd')"
-          :class="{ active: (currentSorting == 'dateEnd') }"
-        >
-          Дата
-        </p>
-
-        <p
-          class="awards__money sort-arrow"
-          @click="toggleCurrentSorting('money')"
-          :class="{ active: (currentSorting == 'money') }"
-        >
-          Призовые
-        </p>
-      </li>
-
-      <awards-item
-        v-for="award in sortAwards"
-        :key="award.id"
-        :logo="award.logo"
-        :game="award.game"
-        :rate="award.rate"
-        :tournament="award.tournament"
-        :place="award.place"
-        :date="award.date"
-        :dateEnd="award.dateEnd"
-        :money="award.money"
+    <div class="shop-products">      
+      <p v-if="isLoading" class="filterStatus">Загрузка...</p>
+      <p v-else-if="!isLoading && (productsPage.length === 0)" class="filterStatus">Товары не найдены</p> 
+      <ul v-else-if="!isLoading && productsPage.length > 0" class="shop-list">        
+        <shop-list-item
+          v-for="product in productsPage"
+          :key="product.id"
+          :img="product.img"
+          :name="product.name"
+          :price="product.price"
+          :link="product.link"           
+          />
+      </ul>      
+      <pagination
+        :currentPage="Math.min(currentPage, countPage)"
+        :countPage="countPage"
+        @switch-page="switchCurrentPage"
       />
-    </ul>
-
-    <div class="pagination">
-      <button
-        class="pagination__nav left"
-        aria-label="Предыдущая страница"
-      ></button>
-      <ul class="pagination__list">
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">1</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">2</a>
-        </li>
-        <li class="pagination__item active">
-          <a class="pagination__link" href="#">3</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">4</a>
-        </li>
-      </ul>
-      <button
-        class="pagination__nav right"
-        aria-label="Следующая страница"
-      ></button>
-    </div>
+    </div>    
+    
   </div>
+
 </template>
 
 <script>
-import AwardsItem from './components/AwardsItem.vue';
-import FilterPost from './components/FilterPost.vue';
+import ShopFilterOption from './components/ShopFilterOption.vue';
+import ShopListItem from './components/ShopListItem.vue';
 import SortUp from './components/SortUp.vue';
+import Pagination from './components/Pagination.vue';
+
+let sortingFunctions = {
+  new: (a, b) => a.id < b.id ? 1 : -1,
+  cheap: (a, b) => a.price > b.price ? 1 : -1,
+  expensive: (a, b) => a.price < b.price ? 1 : -1,
+};
 
 export default {
-  mounted() {
-    this.getData();
-  },
-
+  mounted() {    
+    this.getData();    
+  }, 
   components: {
-    AwardsItem,
-    FilterPost,
+    ShopFilterOption,
+    ShopListItem,
     SortUp,
+    Pagination,
   },
-
   data() {
     return {
-      awards: [],
-      filterPost: [],
-      dropDownFilter: [],
-      currentSorting: '-dateEnd',
-      sortPeriod: 'all',
+      products: [],  
+      categories: [],
       sortUpList: [],
-      isLoading: false, // For errors if no awards
+
+      isLoading: false,
+      
+      sortBy: 'new',     
+      filterMinPrice: 390,
+      filterMaxPrice: 42990,
+      filterCategories: [],
+
+      currentPage: 1,
+      perPage: 3,
+
     };
   },
-
   computed: {
-    sortAwards() {
-      let result = this.awards;
-      let field = this.currentSorting.replace('-', '');
-      let flow = this.currentSorting[0] == '-' ? 'desc' : 'asc';
+    filterProducts() {
+      let result = this.products.filter(item => item.price >= this.filterMinPrice && item.price <= this.filterMaxPrice);
 
-      function customSorting(a, b) {
-        if (flow == 'desc') {
-          return a[field] > b[field] ? -1 : 1;
-        } else {
-          return a[field] < b[field] ? -1 : 1;
-        }
+      if(this.filterCategories.length > 0) {
+         result = result.filter(item => this.filterCategories.includes(item.category));
       }
 
-      result = result.sort(customSorting);
+      // Sorting
+      result = result.sort(sortingFunctions[this.sortBy]);      
 
-      if (this.dropDownFilter.length > 0) {  
-        result = result.filter(item => {
-          return this.dropDownFilter.includes(item.team);
-        });  
-      }   
-
-
-      return result;
+      return result
     },
+
+    productsPage() {
+      const offset = (Math.min(this.currentPage, this.countPage) - 1) * this.perPage;
+      return this.filterProducts.slice(offset, offset + this.perPage);
+    },
+
+    countPage() {
+      return Math.ceil(this.filterProducts.length / this.perPage);
+    }
   },
 
   methods: {
     getData() {
-      this.isLoading = true;
+      this.isLoading = true;      
       fetch('/products.json')
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          }
-        })
-        .then((data) => {
-          this.isLoading = false;
-          const resultsAwards = [];
-          const resultsFilterPost = [];
-          const resultsSortUpList = [];
+      .then(response => {
+        if (response.ok) {
+          return response.json()
+        }
+      })
+      .then(data => {
+        this.isLoading = false;
+        const resultsProd = [];
+        const resultsCat = [];
+        const resultsSortUpList = [];
 
-          for (const id in data.awards) {
-            resultsAwards.push({
-              id: id,
-              logo: data.awards[id].logo,
-              game: data.awards[id].game,
-              rate: data.awards[id].rate,
-              tournament: data.awards[id].tournament,
-              place: data.awards[id].place,
-              date: data.awards[id].date,
-              dateEnd: data.awards[id].dateEndTimeStamp,
-              money: data.awards[id].money,
-              team: data.awards[id].team,
-            });
-          }
-          this.awards = resultsAwards;
+        for (const id in data.products) {
+          resultsProd.push({
+            id: id,
+            name: data.products[id].name,            
+            img: data.products[id].img,            
+            price: data.products[id].price,
+            link: data.products[id].link,
+            category: data.products[id].category
+          });
+        }
+        this.products = resultsProd;        
 
-          for (const id in data.filterPost) {
-            resultsFilterPost.push({
-              id: id,
-              name: data.filterPost[id].name,
-              url: data.filterPost[id].url,
-              img: data.filterPost[id].img ? data.filterPost[id].img : null,
-            });
-          }
-          this.filterPost = resultsFilterPost;
+        for (const id in data.categories) {
+          resultsCat.push({  
+            id: id,          
+            name: data.categories[id].name,
+            url: data.categories[id].url
+          });
+        }
+        this.categories = resultsCat;
 
-          for (const id in data.sortUpList) {
+        for (const id in data.sortUpList) {
             resultsSortUpList.push({
               id: id,
               name: data.sortUpList[id].name,              
@@ -191,37 +172,44 @@ export default {
             });
           }
           this.sortUpList = resultsSortUpList;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    
-    toggleCurrentSorting(value) {
-      if (this.currentSorting !== value) {
-        this.currentSorting = value;
-        return;
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    },  
+
+    checkboxHandler(name) {
+      if(this.filterCategories.includes(name)) {
+        let index = this.filterCategories.indexOf(name);
+        this.filterCategories.splice(index, 1);
+      } else {
+        this.filterCategories.push(name);
       }
-      this.currentSorting = '-' + value;
+      console.log(this.filterCategories);
     },
 
-    applyPostFilter(data) {
-      this.dropDownFilter = data;      
+    resetFilter() {
+      this.filterMinPrice = 390;
+      this.filterMaxPrice = 42990;
+      this.filterCategories = [];
     },
 
     applySortUp(data) {
-      this.sortPeriod = data;
+      this.sortBy = data;
+    },
+
+    switchCurrentPage(page) {
+      this.currentPage = page;
     }
-  },
+  }
 };
 </script>
 
-
 <style scoped>
-.filterStatus {
-  margin: 40px 0 0 20px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #fff;
-}
+  .filterStatus {
+    margin: 40px 0 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+  }
 </style>
