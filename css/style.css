@@ -190,6 +190,10 @@ h2 {
   }
 }
 
+.promo--header {
+  z-index: 300;
+}
+
 @media (max-width: 1024px) {
   .promo--header img {
     max-width: none;
@@ -219,8 +223,8 @@ h2 {
   background-color: #1F2326;
   text-align: center;
   text-transform: uppercase;
-  -webkit-clip-path: polygon(0 0, 87% 0, 100% 40%, 100% 100%, 13% 100%, 0 65%);
-          clip-path: polygon(0 0, 87% 0, 100% 40%, 100% 100%, 13% 100%, 0 65%);
+  -webkit-clip-path: polygon(calc(0px + 12px) 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 calc(0px + 12px));
+          clip-path: polygon(calc(0px + 12px) 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 calc(0px + 12px));
 }
 
 .label--white {
@@ -255,6 +259,13 @@ h2 {
   .date {
     font-size: 12px;
   }
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
 }
 
 .header__wrapper {
@@ -456,6 +467,19 @@ h2 {
   -webkit-clip-path: polygon(0 0, 90% 0, 100% 8%, 100% 100%, 9% 100%, 0 94%);
           clip-path: polygon(0 0, 90% 0, 100% 8%, 100% 100%, 9% 100%, 0 94%);
   z-index: 9;
+  /*&::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: #1F2326;
+
+    @media(max-width: 1000px) {     
+      display: none;      
+    }
+  }*/
 }
 
 .menu-sub__link {
@@ -475,22 +499,6 @@ h2 {
 @media (max-width: 1000px) {
   .menu-sub__link {
     padding: 7px 37px 7px 42px;
-  }
-}
-
-.menu-sub::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  display: block;
-  width: 100%;
-  height: 8px;
-  background-color: #1F2326;
-}
-
-@media (max-width: 1000px) {
-  .menu-sub::before {
-    display: none;
   }
 }
 
@@ -575,12 +583,14 @@ h2 {
           transform: translateY(-50%);
   background-color: #FC5000;
   z-index: 10;
-  -webkit-transition: top 0.2s linear;
-  transition: top 0.2s linear;
+  opacity: 0;
+  -webkit-transition: top 0.2s linear, opacity 0.1s linear;
+  transition: top 0.2s linear, opacity 0.1s linear;
 }
 
 .search__item.active {
   top: 50%;
+  opacity: 1;
 }
 
 @media (max-width: 1000px) {
@@ -700,6 +710,12 @@ h2 {
 
 .switch-lang:hover > .menu-sub {
   display: block;
+}
+
+@media (max-width: 1200px) {
+  .switch-lang .menu-sub__link {
+    padding: 7px 10px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -925,8 +941,8 @@ h2 {
   position: relative;
   -ms-flex-preferred-size: 65%;
       flex-basis: 65%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
-          clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 3% 100%, 0 96%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, calc(0px + 20px) 100%, 0 calc(100% - 20px));
+          clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, calc(0px + 20px) 100%, 0 calc(100% - 20px));
   z-index: 5;
 }
 
@@ -943,8 +959,8 @@ h2 {
   -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
   background-color: #fff;
-  -webkit-clip-path: polygon(0 0, 96% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%);
-          clip-path: polygon(0 0, 96% 0, 100% 5%, 100% 100%, 0% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, calc(100% - 15px) 0, 100% calc(0px + 15px), 100% 100%, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, calc(100% - 15px) 0, 100% calc(0px + 15px), 100% 100%, 0% 100%, 0 100%);
 }
 
 @media (max-width: 950px) {
@@ -960,15 +976,8 @@ h2 {
   .big-news__description {
     padding-top: 40px;
     margin-top: -20px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 2% 100%, 0 89%);
-            clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 2% 100%, 0 89%);
-  }
-}
-
-@media (max-width: 530px) {
-  .big-news__description {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 92%);
-            clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 92%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, calc(0px + 20px) 100%, 0 calc(100% - 20px));
+            clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, calc(0px + 20px) 100%, 0 calc(100% - 20px));
   }
 }
 
@@ -1090,8 +1099,8 @@ h2 {
   margin-top: -100px;
   max-width: 400px;
   background-color: #fff;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
-          clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, 4% 100%, 0 95%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, calc(0px + 15px) 100%, 0 calc(100% - 15px));
+          clip-path: polygon(0 0, 100% 0, 100% 0%, 100% 100%, calc(0px + 15px) 100%, 0 calc(100% - 15px));
 }
 
 @media (max-width: 1024px) {
@@ -1151,8 +1160,10 @@ h2 {
 }
 
 .main-matches-item {
-  -webkit-clip-path: polygon(0 0, 96% 0, 100% 7%, 100% 100%, 5% 100%, 0 93%);
-          clip-path: polygon(0 0, 96% 0, 100% 7%, 100% 100%, 5% 100%, 0 93%);
+  max-width: 425px;
+  margin-right: 20px;
+  -webkit-clip-path: polygon(calc(100% - 15px) 0, 100% calc(0px + 15px), 100% 100%, calc(0px + 15px) 100%, 0 calc(100% - 15px), 0 0);
+          clip-path: polygon(calc(100% - 15px) 0, 100% calc(0px + 15px), 100% 100%, calc(0px + 15px) 100%, 0 calc(100% - 15px), 0 0);
 }
 
 .main-matches-item .post-meta {
@@ -1222,24 +1233,12 @@ h2 {
   z-index: 5;
 }
 
-@media (max-width: 680px) {
-  .main-matches-item {
-    -webkit-clip-path: polygon(0 0, 98% 0, 100% 7%, 100% 100%, 3% 100%, 0 94%);
-            clip-path: polygon(0 0, 98% 0, 100% 7%, 100% 100%, 3% 100%, 0 94%);
-  }
-}
-
-@media (max-width: 450px) {
-  .main-matches-item {
-    -webkit-clip-path: polygon(0 0, 97% 0, 100% 5%, 100% 100%, 4% 100%, 0 94%);
-            clip-path: polygon(0 0, 97% 0, 100% 5%, 100% 100%, 4% 100%, 0 94%);
-  }
-}
-
 .shop-carousel__item {
   margin-bottom: 0;
-  -webkit-clip-path: polygon(0 0, 95% 0, 100% 4%, 100% 100%, 5% 100%, 0 96%);
-          clip-path: polygon(0 0, 95% 0, 100% 4%, 100% 100%, 5% 100%, 0 96%);
+  margin-right: 20px;
+  max-width: 320px;
+  -webkit-clip-path: polygon(calc(100% - 15px) 0, 100% calc(0px + 15px), 100% 100%, calc(0px + 15px) 100%, 0 calc(100% - 15px), 0 0);
+          clip-path: polygon(calc(100% - 15px) 0, 100% calc(0px + 15px), 100% 100%, calc(0px + 15px) 100%, 0 calc(100% - 15px), 0 0);
 }
 
 .shop-carousel__link {

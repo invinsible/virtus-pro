@@ -62,22 +62,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
 
-  // Sticky Header
-  window.onscroll = function() {stickHeader()};
-  const header = document.querySelector(".header__wrapper");
-  const main = document.querySelector(".main");
-  let sticky = header.offsetTop;
-
-  function stickHeader() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-        main.classList.add('bg-scroll');
-    } else {
-        header.classList.remove("sticky");
-        main.classList.remove('bg-scroll');
-    }
-  }
-
   // Share button
   const share = function() {
     const shareBtn = document.querySelector('.shareBtn');
